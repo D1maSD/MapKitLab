@@ -9,13 +9,20 @@ import UIKit
 import MapKit
 
 
-class Places: NSObject, MKAnnotation {
+protocol Places: MKAnnotation {
+    var title: String? { get set }
+    var annotation: String? { get set }
+    var locationName: String? { get set }
+    var coordinate: CLLocationCoordinate2D { get set }
+    var subtitle: String? { get }
+}
+
+class Locations: NSObject, Places {
     
-   let a = MKAnnotationView()
     var title: String?
     var annotation: String?
     var locationName: String?
-    let coordinate: CLLocationCoordinate2D
+    var coordinate: CLLocationCoordinate2D
     var subtitle: String? {
         return locationName
     }

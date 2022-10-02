@@ -8,5 +8,6 @@ target 'MapKitLaba' do
   # Pods for MapKitLaba
 
   pod 'SnapKit'	
+
 	
 end

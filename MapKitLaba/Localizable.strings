@@ -1,0 +1,52 @@
+/* 
+  Localazible.strings
+  MapKitLaba
+
+  Created by Мельник Дмитрий on 30.09.2022.
+  
+*/
+
+"LUNACHARSKIY_TITLE" = "Театр Луначарского";
+"LUNACHARSKIY_SUBTITLE" = "Театр";
+"LUNACHARSKIY_LOCATIONNAME" = "проспект Нахимова, 6";
+
+"OMEGA_TITLE" = "Omega";
+"OMEGA_SUBTITLE" = "Beach";
+"OMEGA_LOCATIONNAME" = "Гагаринский район, Севастополь";
+
+"MUSSON_TITLE" = "Муссон";
+"MUSSON_SUBTITLE" = "торгово-развлекательный центр";
+"MUSSON_LOCATIONNAME" = "​улица Вакуленчука, 29";
+
+"LAVANDA_TITLE" = "LAVANDA mall";
+"LAVANDA_SUBTITLE" = "торговый центр";
+"LAVANDA_LOCATIONNAME" = "​​​​​​​Университетская, 33";
+
+"SEAMALL_TITLE" = "Sea Mall";
+"SEAMALL_SUBTITLE" = "торгово-развлекательный центр";
+"SEAMALL_LOCATIONNAME" = "​​проспект Генерала Острякова, 260";
+
+"MALAHOW_TITLE" = "Малахов курган";
+"MALAHOW_SUBTITLE" = "мемориальный комплекс";
+"MALAHOW_LOCATIONNAME" = "​​​Окопная, 1/2";
+
+"SUBSHIPS_TITLE" = "Памятник затопленным кораблям";
+"SUBSHIPS_SUBTITLE" = "мемориал";
+"SUBSHIPS_LOCATIONNAME" = "​​​Окопная, 1/2";
+
+"CHERSONES_TITLE" = "Херсонес Таврический";
+"CHERSONES_SUBTITLE" = "национальный музей-заповедник";
+"CHERSONES_LOCATIONNAME" = "​​​​Древняя улица, 1";
+
+"PANORAMA_TITLE" = "Панорама Оборона Севастополя 1854-1855 гг";
+"PANORAMA_SUBTITLE" = "Музеи";
+"PANORAMA_LOCATIONNAME" = "​​​​​площадь Ушакова, 1/1";
+
+"CEMENTARY_TITLE" = "Старое городское кладбище";
+"CEMENTARY_SUBTITLE" = "Кладбище";
+"CEMENTARY_LOCATIONNAME" = "​​​​​​улица Пожарова, 7";
+
+"SEVSU_TITLE" = "Севастопольский Государственный Университет";
+"SEVSU_SUBTITLE" = "Университет";
+"SEVSU_LOCATIONNAME" = "​​​​​​​Университетская, 33";
+
