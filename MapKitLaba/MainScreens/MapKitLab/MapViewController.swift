@@ -18,6 +18,7 @@ class MapViewController: ViewController {
     private var currentLocation = CLLocation(latitude: 44.605713, longitude: 33.535521)
     
     var viewModel: ViewModel?
+    var aboutPlaceVC = AboutPlaceViewController()
     
     var mussonImageArray = [
         UIImage(named: "musson1"),
@@ -207,6 +208,8 @@ class MapViewController: ViewController {
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(Panorama.self))
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(Cementary.self))
         mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(SevSU.self))
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(Omega.self))
+        mapView.register(MKMarkerAnnotationView.self, forAnnotationViewWithReuseIdentifier: NSStringFromClass(SeaMall.self))
     }
     
     func enabledLocationManager() {
@@ -283,46 +286,70 @@ extension MapViewController: MKMapViewDelegate {
         if let annotation = view.annotation, annotation.isKind(of: Lunacharskiy.self) {
             print("lunacharskiy tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
-            
+            aboutPlaceVC.typeWith = 1
         }
-        print("calloutAccessoryControlTapped")
         
         if let annotation = view.annotation, annotation.isKind(of: Musson.self) {
-            print("lunacharskiy tapped")
+            print("Musson tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
-            
+            aboutPlaceVC.typeWith = 2
         }
         
         if let annotation = view.annotation, annotation.isKind(of: MalachovHill.self) {
-            print("lunacharskiy tapped")
+            print("MalachovHill tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
-            
+            aboutPlaceVC.typeWith = 3
         }
         
         if let annotation = view.annotation, annotation.isKind(of: SubmergedShips.self) {
-            print("lunacharskiy tapped")
+            print("SubmergedShips tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
-            
+            aboutPlaceVC.typeWith = 4
         }
         
         if let annotation = view.annotation, annotation.isKind(of: ChersonesTavr.self) {
-            print("lunacharskiy tapped")
-            self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            print("ChersonesTavr tapped")
+            self.navigationController?.pushViewController(aboutPlaceVC, animated: true)
+            aboutPlaceVC.typeWith = 5
+            print(AboutPlaceViewController.typeOf)
         }
         
         if let annotation = view.annotation, annotation.isKind(of: Panorama.self) {
-            print("lunacharskiy tapped")
+            print("Panorama tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            aboutPlaceVC.typeWith = 6
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
+            print(AboutPlaceViewController.typeOf)
         }
         
         if let annotation = view.annotation, annotation.isKind(of: Cementary.self) {
-            print("lunacharskiy tapped")
+            print("Cementary tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            aboutPlaceVC.typeWith = 7
         }
         
         if let annotation = view.annotation, annotation.isKind(of: SevSU.self) {
-            print("lunacharskiy tapped")
+            print("SevSU tapped")
             self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            aboutPlaceVC.typeWith = 8
+        }
+        
+        if let annotation = view.annotation, annotation.isKind(of: Omega.self) {
+            print("Omega tapped")
+            self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            aboutPlaceVC.typeWith = 9
+        }
+        
+        if let annotation = view.annotation, annotation.isKind(of: SeaMall.self) {
+            print("SeaMall tapped")
+            self.navigationController?.pushViewController(AboutPlaceViewController(), animated: true)
+            aboutPlaceVC.typeWith = 10
         }
     }
     

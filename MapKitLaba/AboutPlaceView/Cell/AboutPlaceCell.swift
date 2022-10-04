@@ -13,9 +13,17 @@ class AboutPlaceCell: UITableViewCell {
     
     private var placeImage = UIImageView()
     var pageControllView = UIView()
+//    var collectionView = UICollectionView()
     
     var shortNameLabel = UILabel()
     var fullNameLabel = UILabel()
+    
+    
+    var viewModel = AboutPlaceCellVeiwModel()
+    var currentIndex = 0
+    var timer: Timer?
+    
+    
     
     var rateRoundButton = RoundButton(frame: .zero)
     
@@ -49,35 +57,24 @@ class AboutPlaceCell: UITableViewCell {
     var miniMapView = MKMapView()
     var adressLabel = UILabel()
     var adressIcon = UIImageView()
+    var pageController = UIPageControl()
     
-    
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpLayout()
         setupUI()
-        
-        saveButton.backgroundColor = .systemBlue
-        saveButton.setImage(UIImage(named: "time"), for: .normal)
-        
-        rateRoundButton.backgroundColor = .systemOrange
-        rateRoundButton.setImage(UIImage(named: "4.9"), for: .normal)
-        
-        rateButton.backgroundColor = .systemBlue
-        rateButton.setImage(UIImage(named: "time"), for: .normal)
-        
-        writeTipButton.backgroundColor = .systemBlue
-        writeTipButton.setImage(UIImage(named: "time"), for: .normal)
-        
-        
-        
-        userButton.backgroundColor = .systemRed
-        
-        timeIcon.image = UIImage(named: "time")
-        phoneIcon.image = UIImage(named: "phone")
-        webIcon.image = UIImage(named: "web")
-        adressIcon.image = UIImage(named: "pin")
+//        setupCollectionView()
     }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
+// MARK: - setupUI
+
+extension AboutPlaceCell {
     
     func setupUI() {
         separatorView.backgroundColor = .red
@@ -100,17 +97,40 @@ class AboutPlaceCell: UITableViewCell {
         
         adressLabel.text = "ул. Вакуленчука"
         informationLabel.text = "Информация"
+        saveButton.backgroundColor = .systemBlue
+        saveButton.setImage(UIImage(named: "time"), for: .normal)
+        
+        rateRoundButton.backgroundColor = .systemOrange
+        rateRoundButton.setImage(UIImage(named: "4.9"), for: .normal)
+        
+        rateButton.backgroundColor = .systemBlue
+        rateButton.setImage(UIImage(named: "time"), for: .normal)
+        
+        writeTipButton.backgroundColor = .systemBlue
+        writeTipButton.setImage(UIImage(named: "time"), for: .normal)
+        
+        userButton.backgroundColor = .systemRed
+        
+        timeIcon.image = UIImage(named: "time")
+        phoneIcon.image = UIImage(named: "phone")
+        webIcon.image = UIImage(named: "web")
+        adressIcon.image = UIImage(named: "pin")
     }
+}
+
+// MARK: - setupLayout
+
+extension AboutPlaceCell {
     
     func setUpLayout() {
-        
-        
-        
+ 
         self.contentView.backgroundColor = .white
         
         contentView.addSubviewWith(placeImage)
+        placeImage.addSubview(pageController)
+        pageController.numberOfPages = 5
         
-        if #available(iOS 11.0, *) {
+//        if #available(iOS 11.0, *) {
             
             let guide = self.contentView.safeAreaLayoutGuide
             placeImage.snp.makeConstraints {
@@ -120,26 +140,26 @@ class AboutPlaceCell: UITableViewCell {
                 $0.height.equalTo(250)
             }
             
-        } else {
-            NSLayoutConstraint(item: placeImage,
-                               attribute: .top,
-                               relatedBy: .equal,
-                               toItem: contentView, attribute: .top,
-                               multiplier: 1.0, constant: 0).isActive = true
-            NSLayoutConstraint(item: placeImage,
-                               attribute: .leading,
-                               relatedBy: .equal, toItem: contentView,
-                               attribute: .leading,
-                               multiplier: 1.0,
-                               constant: 0).isActive = true
-            NSLayoutConstraint(item: placeImage, attribute: .trailing,
-                               relatedBy: .equal,
-                               toItem: contentView,
-                               attribute: .trailing,
-                               multiplier: 1.0,
-                               constant: 0).isActive = true
-        }
-        
+//        } else {
+//            NSLayoutConstraint(item: placeImage,
+//                               attribute: .top,
+//                               relatedBy: .equal,
+//                               toItem: contentView, attribute: .top,
+//                               multiplier: 1.0, constant: 0).isActive = true
+//            NSLayoutConstraint(item: placeImage,
+//                               attribute: .leading,
+//                               relatedBy: .equal, toItem: contentView,
+//                               attribute: .leading,
+//                               multiplier: 1.0,
+//                               constant: 0).isActive = true
+//            NSLayoutConstraint(item: placeImage, attribute: .trailing,
+//                               relatedBy: .equal,
+//                               toItem: contentView,
+//                               attribute: .trailing,
+//                               multiplier: 1.0,
+//                               constant: 0).isActive = true
+//        }
+//
         
         
         
@@ -171,13 +191,14 @@ class AboutPlaceCell: UITableViewCell {
         contentView.addSubviewWith(adressLabel)
         contentView.addSubviewWith(adressIcon)
         
-//        placeImage.snp.makeConstraints {
-//            $0.left.equalToSuperview()
-//            $0.right.equalToSuperview()
-//            $0.top.equalToSuperview()
-//            //250
-//            $0.height.equalTo(250)
-//        }
+        pageController.snp.makeConstraints {
+            $0.right.equalTo(placeImage.snp.right).offset(-20)
+            $0.left.equalTo(placeImage.snp.left).offset(20)
+            $0.bottom.equalTo(placeImage.snp.bottom).offset(-40)
+            $0.height.width.equalTo(10)
+        }
+        
+        
         shortNameLabel.snp.makeConstraints {
             $0.left.equalTo(contentView.snp.left).offset(20)
             $0.top.equalTo(placeImage.snp.bottom).offset(10)
@@ -297,12 +318,38 @@ class AboutPlaceCell: UITableViewCell {
             $0.centerY.equalTo(adressIcon.snp.centerY)
         }
     }
-    
-    
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
 }
+
+// MARK: - setup CollectionViewDelegate, FlowLayout, DataSource
+
+//extension AboutPlaceCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+//
+//    func setupTimer() {
+//        timer = Timer.scheduledTimer(timeInterval: 2.5, target: self, selector:  #selector(moveToNextIndex), userInfo: nil, repeats: true)
+//    }
+//
+//    @objc func moveToNextIndex() {
+//        if currentIndex < viewModel.cementaryImages.count - 1 {
+//            currentIndex += 1
+//        } else {
+//            currentIndex = 0
+//        }
+//        collectionView.scrollToItem(at: IndexPath(item: currentIndex, section: 0), at: .centeredHorizontally, animated: true)
+//    }
+//
+//    func setupCollectionView() {
+//        collectionView.delegate = self
+//        collectionView.dataSource = self
+//    }
+//
+//    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+//        <#code#>
+//    }
+//
+//
+//    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        <#code#>
+//    }
+//
+//
+//}

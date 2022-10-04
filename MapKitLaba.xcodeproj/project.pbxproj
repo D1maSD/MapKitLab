@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2FC03AB97E9E13C392E4EC51 /* Pods_MapKitLaba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7DCFBA66D188242E91E78C /* Pods_MapKitLaba.framework */; };
+		A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */; };
+		A841C73028EB37B30034ED8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72F28EB37B30034ED8A /* User.swift */; };
 		A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A35B28DBA0FE007A4380 /* AppDelegate.swift */; };
 		A866A36028DBA0FE007A4380 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A35F28DBA0FE007A4380 /* MapViewController.swift */; };
 		A866A36528DBA102007A4380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A866A36428DBA102007A4380 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 
 /* Begin PBXFileReference section */
 		89CF5A76CF49E1C610DD4FD9 /* Pods-MapKitLaba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitLaba.release.xcconfig"; path = "Target Support Files/Pods-MapKitLaba/Pods-MapKitLaba.release.xcconfig"; sourceTree = "<group>"; };
+		A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPlaceCellVeiwModel.swift; sourceTree = "<group>"; };
+		A841C72F28EB37B30034ED8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A866A35828DBA0FE007A4380 /* MapKitLaba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitLaba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A866A35B28DBA0FE007A4380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A866A35F28DBA0FE007A4380 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +90,74 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A841C73128EC132A0034ED8A /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				A866A36628DBA102007A4380 /* LaunchScreen.storyboard */,
+				A866A35B28DBA0FE007A4380 /* AppDelegate.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		A841C73228EC13A20034ED8A /* Localazable */ = {
+			isa = PBXGroup;
+			children = (
+				A8F590C728E74A5700534342 /* Localizable.strings */,
+			);
+			path = Localazable;
+			sourceTree = "<group>";
+		};
+		A841C73328EC13D40034ED8A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A866A36928DBA102007A4380 /* Info.plist */,
+				A866A36428DBA102007A4380 /* Assets.xcassets */,
+				A841C73228EC13A20034ED8A /* Localazable */,
+				A841C73128EC132A0034ED8A /* Launch */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A841C73428EC16C80034ED8A /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A841C73528EC18120034ED8A /* JSON */,
+				A8D0E89728E2D43A005D871C /* Styles */,
+				A8D0E89228E22A43005D871C /* Extensions */,
+				A8D0E88F28E228EB005D871C /* Components */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A841C73528EC18120034ED8A /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				A8B49B9928DC9509003FDF37 /* Directions.geojson */,
+				A8B49B9C28DCB0B3003FDF37 /* Parser.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		A841C73628EC1C360034ED8A /* MainScreens */ = {
+			isa = PBXGroup;
+			children = (
+				A841C73728EC1C560034ED8A /* MapKitLab */,
+			);
+			path = MainScreens;
+			sourceTree = "<group>";
+		};
+		A841C73728EC1C560034ED8A /* MapKitLab */ = {
+			isa = PBXGroup;
+			children = (
+				A866A35F28DBA0FE007A4380 /* MapViewController.swift */,
+				A8CFFEFA28E4810F009F14B8 /* ViewModel.swift */,
+				A8F590C928E848CA00534342 /* InfoAboutPlaceViewController.swift */,
+				A8CFFEFC28E4AAE0009F14B8 /* TestScrollViewController.swift */,
+				A841C72F28EB37B30034ED8A /* User.swift */,
+			);
+			path = MapKitLab;
+			sourceTree = "<group>";
+		};
 		A866A34F28DBA0FD007A4380 = {
 			isa = PBXGroup;
 			children = (
@@ -107,22 +179,11 @@
 		A866A35A28DBA0FE007A4380 /* MapKitLaba */ = {
 			isa = PBXGroup;
 			children = (
-				A866A35B28DBA0FE007A4380 /* AppDelegate.swift */,
-				A8CFFEFC28E4AAE0009F14B8 /* TestScrollViewController.swift */,
-				A8CFFEFA28E4810F009F14B8 /* ViewModel.swift */,
-				A8D0E88F28E228EB005D871C /* Components */,
+				A841C73628EC1C360034ED8A /* MainScreens */,
+				A841C73328EC13D40034ED8A /* Resources */,
+				A841C73428EC16C80034ED8A /* System */,
 				A8D0E88A28E1E4FF005D871C /* AboutPlaceView */,
-				A8B49B9928DC9509003FDF37 /* Directions.geojson */,
-				A8D0E89728E2D43A005D871C /* Styles */,
-				A8D0E89228E22A43005D871C /* Extensions */,
-				A8B49B9C28DCB0B3003FDF37 /* Parser.swift */,
 				A8F590C328E7202900534342 /* Places */,
-				A866A35F28DBA0FE007A4380 /* MapViewController.swift */,
-				A8F590C928E848CA00534342 /* InfoAboutPlaceViewController.swift */,
-				A866A36428DBA102007A4380 /* Assets.xcassets */,
-				A866A36628DBA102007A4380 /* LaunchScreen.storyboard */,
-				A8F590C728E74A5700534342 /* Localizable.strings */,
-				A866A36928DBA102007A4380 /* Info.plist */,
 			);
 			path = MapKitLaba;
 			sourceTree = "<group>";
@@ -148,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				A8D0E88828E1E4F9005D871C /* AboutPlaceCell.swift */,
+				A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -315,6 +377,7 @@
 				A8D0E88928E1E4F9005D871C /* AboutPlaceCell.swift in Sources */,
 				A8F590C628E7205600534342 /* Lunacharskiy.swift in Sources */,
 				A8B49B9D28DCB0B3003FDF37 /* Parser.swift in Sources */,
+				A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */,
 				A8CFFEFD28E4AAE0009F14B8 /* TestScrollViewController.swift in Sources */,
 				A8D0E89C28E2D493005D871C /* Styles.swift in Sources */,
 				A866A36028DBA0FE007A4380 /* MapViewController.swift in Sources */,
@@ -324,6 +387,7 @@
 				A8D0E89428E22A5C005D871C /* UIView+Extensions.swift in Sources */,
 				A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */,
 				A8D0E89628E2D3C7005D871C /* RoundButton.swift in Sources */,
+				A841C73028EB37B30034ED8A /* User.swift in Sources */,
 				A8D0E88728E1E335005D871C /* AboutPlaceViewController.swift in Sources */,
 				A8D0E89128E22902005D871C /* ViewController.swift in Sources */,
 				A8B49B9B28DC9F2D003FDF37 /* Locations.swift in Sources */,
