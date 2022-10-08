@@ -10,6 +10,15 @@
 		2FC03AB97E9E13C392E4EC51 /* Pods_MapKitLaba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7DCFBA66D188242E91E78C /* Pods_MapKitLaba.framework */; };
 		A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */; };
 		A841C73028EB37B30034ED8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72F28EB37B30034ED8A /* User.swift */; };
+		A841C73928EC1FA10034ED8A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C73828EC1FA10034ED8A /* SignUpViewController.swift */; };
+		A841C73C28EC358C0034ED8A /* LabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C73B28EC358C0034ED8A /* LabelStyles.swift */; };
+		A841C73F28EC79DF0034ED8A /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A841C73D28EC79DF0034ED8A /* CoreData.xcdatamodeld */; };
+		A841C74128EC7FD30034ED8A /* UILabel + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C74028EC7FD30034ED8A /* UILabel + Extensions.swift */; };
+		A841C74328EC80750034ED8A /* UIButton + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C74228EC80750034ED8A /* UIButton + Extensions.swift */; };
+		A841C74528EC83F50034ED8A /* UITextField + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C74428EC83F50034ED8A /* UITextField + Extension.swift */; };
+		A841C74728EC8CA50034ED8A /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C74628EC8CA50034ED8A /* UIFont+Extensions.swift */; };
+		A841C74928EC90D60034ED8A /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A841C74828EC90D60034ED8A /* Colors.xcassets */; };
+		A841C74B28EC913F0034ED8A /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C74A28EC913F0034ED8A /* Colors.swift */; };
 		A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A35B28DBA0FE007A4380 /* AppDelegate.swift */; };
 		A866A36028DBA0FE007A4380 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A35F28DBA0FE007A4380 /* MapViewController.swift */; };
 		A866A36528DBA102007A4380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A866A36428DBA102007A4380 /* Assets.xcassets */; };
@@ -26,15 +35,36 @@
 		A8D0E89928E2D454005D871C /* ButtonStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0E89828E2D454005D871C /* ButtonStyles.swift */; };
 		A8D0E89C28E2D493005D871C /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0E89B28E2D493005D871C /* Styles.swift */; };
 		A8D0E89E28E2F46C005D871C /* UITableView + Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8D0E89D28E2F46C005D871C /* UITableView + Extensions.swift */; };
+		A8ECB04F28F04BD1006A230F /* BaseTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB04E28F04BD1006A230F /* BaseTextFieldCell.swift */; };
+		A8ECB05128F0B866006A230F /* BaseButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05028F0B866006A230F /* BaseButtonStyle.swift */; };
+		A8ECB05328F18E9F006A230F /* SignUpViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05228F18E9F006A230F /* SignUpViewControllerTwo.swift */; };
+		A8ECB05528F19CFA006A230F /* AgreeWithRulesSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05428F19CFA006A230F /* AgreeWithRulesSwift.swift */; };
+		A8ECB05728F1F8D5006A230F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05628F1F8D5006A230F /* CustomTabBarController.swift */; };
+		A8ECB05C28F1FA12006A230F /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05B28F1FA12006A230F /* TodayViewController.swift */; };
+		A8ECB05E28F1FA37006A230F /* NewsPlusVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05D28F1FA37006A230F /* NewsPlusVIewController.swift */; };
+		A8ECB06028F1FA56006A230F /* FollowingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8ECB05F28F1FA56006A230F /* FollowingViewController.swift */; };
 		A8F590C628E7205600534342 /* Lunacharskiy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F590C528E7205600534342 /* Lunacharskiy.swift */; };
 		A8F590C828E74A5800534342 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = A8F590C728E74A5700534342 /* Localizable.strings */; };
 		A8F590CA28E848CA00534342 /* InfoAboutPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F590C928E848CA00534342 /* InfoAboutPlaceViewController.swift */; };
+		A8F72C7E28ED995A0019C9FD /* CellConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F72C7D28ED995A0019C9FD /* CellConfiguration.swift */; };
+		A8F72C8128ED9A370019C9FD /* BaseDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F72C8028ED9A370019C9FD /* BaseDescriptionCell.swift */; };
+		A8F72C8328EF15090019C9FD /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F72C8228EF15090019C9FD /* SignInViewController.swift */; };
+		A8F72C8528EF24B30019C9FD /* BaseTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F72C8428EF24B30019C9FD /* BaseTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		89CF5A76CF49E1C610DD4FD9 /* Pods-MapKitLaba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitLaba.release.xcconfig"; path = "Target Support Files/Pods-MapKitLaba/Pods-MapKitLaba.release.xcconfig"; sourceTree = "<group>"; };
 		A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPlaceCellVeiwModel.swift; sourceTree = "<group>"; };
 		A841C72F28EB37B30034ED8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A841C73828EC1FA10034ED8A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		A841C73B28EC358C0034ED8A /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
+		A841C73E28EC79DF0034ED8A /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		A841C74028EC7FD30034ED8A /* UILabel + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extensions.swift"; sourceTree = "<group>"; };
+		A841C74228EC80750034ED8A /* UIButton + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Extensions.swift"; sourceTree = "<group>"; };
+		A841C74428EC83F50034ED8A /* UITextField + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField + Extension.swift"; sourceTree = "<group>"; };
+		A841C74628EC8CA50034ED8A /* UIFont+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Extensions.swift"; sourceTree = "<group>"; };
+		A841C74828EC90D60034ED8A /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		A841C74A28EC913F0034ED8A /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		A866A35828DBA0FE007A4380 /* MapKitLaba.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapKitLaba.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A866A35B28DBA0FE007A4380 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A866A35F28DBA0FE007A4380 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
@@ -54,9 +84,21 @@
 		A8D0E89828E2D454005D871C /* ButtonStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyles.swift; sourceTree = "<group>"; };
 		A8D0E89B28E2D493005D871C /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 		A8D0E89D28E2F46C005D871C /* UITableView + Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView + Extensions.swift"; sourceTree = "<group>"; };
+		A8ECB04E28F04BD1006A230F /* BaseTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextFieldCell.swift; sourceTree = "<group>"; };
+		A8ECB05028F0B866006A230F /* BaseButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseButtonStyle.swift; sourceTree = "<group>"; };
+		A8ECB05228F18E9F006A230F /* SignUpViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewControllerTwo.swift; sourceTree = "<group>"; };
+		A8ECB05428F19CFA006A230F /* AgreeWithRulesSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreeWithRulesSwift.swift; sourceTree = "<group>"; };
+		A8ECB05628F1F8D5006A230F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		A8ECB05B28F1FA12006A230F /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		A8ECB05D28F1FA37006A230F /* NewsPlusVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsPlusVIewController.swift; sourceTree = "<group>"; };
+		A8ECB05F28F1FA56006A230F /* FollowingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingViewController.swift; sourceTree = "<group>"; };
 		A8F590C528E7205600534342 /* Lunacharskiy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lunacharskiy.swift; sourceTree = "<group>"; };
 		A8F590C728E74A5700534342 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		A8F590C928E848CA00534342 /* InfoAboutPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoAboutPlaceViewController.swift; sourceTree = "<group>"; };
+		A8F72C7D28ED995A0019C9FD /* CellConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfiguration.swift; sourceTree = "<group>"; };
+		A8F72C8028ED9A370019C9FD /* BaseDescriptionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDescriptionCell.swift; sourceTree = "<group>"; };
+		A8F72C8228EF15090019C9FD /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A8F72C8428EF24B30019C9FD /* BaseTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTextField.swift; sourceTree = "<group>"; };
 		BE7DCFBA66D188242E91E78C /* Pods_MapKitLaba.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MapKitLaba.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B16960DCD10921D75C1599 /* Pods-MapKitLaba.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitLaba.debug.xcconfig"; path = "Target Support Files/Pods-MapKitLaba/Pods-MapKitLaba.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +154,8 @@
 			children = (
 				A866A36928DBA102007A4380 /* Info.plist */,
 				A866A36428DBA102007A4380 /* Assets.xcassets */,
+				A841C74828EC90D60034ED8A /* Colors.xcassets */,
+				A841C74A28EC913F0034ED8A /* Colors.swift */,
 				A841C73228EC13A20034ED8A /* Localazable */,
 				A841C73128EC132A0034ED8A /* Launch */,
 			);
@@ -121,6 +165,7 @@
 		A841C73428EC16C80034ED8A /* System */ = {
 			isa = PBXGroup;
 			children = (
+				A8F72C7C28ED99210019C9FD /* Base */,
 				A841C73528EC18120034ED8A /* JSON */,
 				A8D0E89728E2D43A005D871C /* Styles */,
 				A8D0E89228E22A43005D871C /* Extensions */,
@@ -141,6 +186,8 @@
 		A841C73628EC1C360034ED8A /* MainScreens */ = {
 			isa = PBXGroup;
 			children = (
+				A8ECB05928F1F93A006A230F /* JoinGroup */,
+				A8ECB05828F1F91F006A230F /* News */,
 				A841C73728EC1C560034ED8A /* MapKitLab */,
 			);
 			path = MainScreens;
@@ -149,13 +196,22 @@
 		A841C73728EC1C560034ED8A /* MapKitLab */ = {
 			isa = PBXGroup;
 			children = (
-				A866A35F28DBA0FE007A4380 /* MapViewController.swift */,
-				A8CFFEFA28E4810F009F14B8 /* ViewModel.swift */,
+				A8D0E88A28E1E4FF005D871C /* AboutPlaceView */,
+				A841C73A28EC1FFF0034ED8A /* MapView */,
 				A8F590C928E848CA00534342 /* InfoAboutPlaceViewController.swift */,
+				A8CFFEFA28E4810F009F14B8 /* ViewModel.swift */,
 				A8CFFEFC28E4AAE0009F14B8 /* TestScrollViewController.swift */,
 				A841C72F28EB37B30034ED8A /* User.swift */,
 			);
 			path = MapKitLab;
+			sourceTree = "<group>";
+		};
+		A841C73A28EC1FFF0034ED8A /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				A866A35F28DBA0FE007A4380 /* MapViewController.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		A866A34F28DBA0FD007A4380 = {
@@ -182,7 +238,6 @@
 				A841C73628EC1C360034ED8A /* MainScreens */,
 				A841C73328EC13D40034ED8A /* Resources */,
 				A841C73428EC16C80034ED8A /* System */,
-				A8D0E88A28E1E4FF005D871C /* AboutPlaceView */,
 				A8F590C328E7202900534342 /* Places */,
 			);
 			path = MapKitLaba;
@@ -210,6 +265,7 @@
 			children = (
 				A8D0E88828E1E4F9005D871C /* AboutPlaceCell.swift */,
 				A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */,
+				A8ECB05428F19CFA006A230F /* AgreeWithRulesSwift.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -217,8 +273,11 @@
 		A8D0E88F28E228EB005D871C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A8F72C7F28ED9A1C0019C9FD /* TableViewCells */,
 				A8D0E89028E22902005D871C /* ViewController.swift */,
 				A8D0E89528E2D3C7005D871C /* RoundButton.swift */,
+				A8F72C8428EF24B30019C9FD /* BaseTextField.swift */,
+				A8ECB05028F0B866006A230F /* BaseButtonStyle.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -227,7 +286,12 @@
 			isa = PBXGroup;
 			children = (
 				A8D0E89328E22A5C005D871C /* UIView+Extensions.swift */,
+				A841C74628EC8CA50034ED8A /* UIFont+Extensions.swift */,
+				A841C74028EC7FD30034ED8A /* UILabel + Extensions.swift */,
 				A8D0E89D28E2F46C005D871C /* UITableView + Extensions.swift */,
+				A841C73D28EC79DF0034ED8A /* CoreData.xcdatamodeld */,
+				A841C74228EC80750034ED8A /* UIButton + Extensions.swift */,
+				A841C74428EC83F50034ED8A /* UITextField + Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -237,8 +301,38 @@
 			children = (
 				A8D0E89B28E2D493005D871C /* Styles.swift */,
 				A8D0E89828E2D454005D871C /* ButtonStyles.swift */,
+				A841C73B28EC358C0034ED8A /* LabelStyles.swift */,
 			);
 			path = Styles;
+			sourceTree = "<group>";
+		};
+		A8ECB05828F1F91F006A230F /* News */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECB05B28F1FA12006A230F /* TodayViewController.swift */,
+				A8ECB05D28F1FA37006A230F /* NewsPlusVIewController.swift */,
+				A8ECB05F28F1FA56006A230F /* FollowingViewController.swift */,
+				A8ECB05A28F1F997006A230F /* TabBar */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		A8ECB05928F1F93A006A230F /* JoinGroup */ = {
+			isa = PBXGroup;
+			children = (
+				A841C73828EC1FA10034ED8A /* SignUpViewController.swift */,
+				A8ECB05228F18E9F006A230F /* SignUpViewControllerTwo.swift */,
+				A8F72C8228EF15090019C9FD /* SignInViewController.swift */,
+			);
+			path = JoinGroup;
+			sourceTree = "<group>";
+		};
+		A8ECB05A28F1F997006A230F /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A8ECB05628F1F8D5006A230F /* CustomTabBarController.swift */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		A8F590C328E7202900534342 /* Places */ = {
@@ -256,6 +350,23 @@
 				A8F590C528E7205600534342 /* Lunacharskiy.swift */,
 			);
 			path = Seastopol;
+			sourceTree = "<group>";
+		};
+		A8F72C7C28ED99210019C9FD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A8F72C7D28ED995A0019C9FD /* CellConfiguration.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A8F72C7F28ED9A1C0019C9FD /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				A8F72C8028ED9A370019C9FD /* BaseDescriptionCell.swift */,
+				A8ECB04E28F04BD1006A230F /* BaseTextFieldCell.swift */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A866A36828DBA102007A4380 /* LaunchScreen.storyboard in Resources */,
+				A841C74928EC90D60034ED8A /* Colors.xcassets in Resources */,
 				A866A36528DBA102007A4380 /* Assets.xcassets in Resources */,
 				A8F590C828E74A5800534342 /* Localizable.strings in Resources */,
 			);
@@ -375,6 +487,7 @@
 			files = (
 				A8D0E89928E2D454005D871C /* ButtonStyles.swift in Sources */,
 				A8D0E88928E1E4F9005D871C /* AboutPlaceCell.swift in Sources */,
+				A841C74328EC80750034ED8A /* UIButton + Extensions.swift in Sources */,
 				A8F590C628E7205600534342 /* Lunacharskiy.swift in Sources */,
 				A8B49B9D28DCB0B3003FDF37 /* Parser.swift in Sources */,
 				A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */,
@@ -382,15 +495,34 @@
 				A8D0E89C28E2D493005D871C /* Styles.swift in Sources */,
 				A866A36028DBA0FE007A4380 /* MapViewController.swift in Sources */,
 				A8D0E89E28E2F46C005D871C /* UITableView + Extensions.swift in Sources */,
+				A8F72C8328EF15090019C9FD /* SignInViewController.swift in Sources */,
 				A8F590CA28E848CA00534342 /* InfoAboutPlaceViewController.swift in Sources */,
+				A8F72C8528EF24B30019C9FD /* BaseTextField.swift in Sources */,
 				A8CFFEFB28E4810F009F14B8 /* ViewModel.swift in Sources */,
 				A8D0E89428E22A5C005D871C /* UIView+Extensions.swift in Sources */,
+				A841C74728EC8CA50034ED8A /* UIFont+Extensions.swift in Sources */,
+				A8F72C7E28ED995A0019C9FD /* CellConfiguration.swift in Sources */,
+				A841C74128EC7FD30034ED8A /* UILabel + Extensions.swift in Sources */,
+				A8ECB05328F18E9F006A230F /* SignUpViewControllerTwo.swift in Sources */,
+				A841C73C28EC358C0034ED8A /* LabelStyles.swift in Sources */,
+				A8ECB05C28F1FA12006A230F /* TodayViewController.swift in Sources */,
 				A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */,
+				A8ECB05E28F1FA37006A230F /* NewsPlusVIewController.swift in Sources */,
+				A8ECB04F28F04BD1006A230F /* BaseTextFieldCell.swift in Sources */,
+				A8ECB05728F1F8D5006A230F /* CustomTabBarController.swift in Sources */,
+				A8ECB05528F19CFA006A230F /* AgreeWithRulesSwift.swift in Sources */,
 				A8D0E89628E2D3C7005D871C /* RoundButton.swift in Sources */,
 				A841C73028EB37B30034ED8A /* User.swift in Sources */,
+				A8ECB06028F1FA56006A230F /* FollowingViewController.swift in Sources */,
 				A8D0E88728E1E335005D871C /* AboutPlaceViewController.swift in Sources */,
+				A8ECB05128F0B866006A230F /* BaseButtonStyle.swift in Sources */,
+				A841C73928EC1FA10034ED8A /* SignUpViewController.swift in Sources */,
+				A841C74B28EC913F0034ED8A /* Colors.swift in Sources */,
 				A8D0E89128E22902005D871C /* ViewController.swift in Sources */,
 				A8B49B9B28DC9F2D003FDF37 /* Locations.swift in Sources */,
+				A841C73F28EC79DF0034ED8A /* CoreData.xcdatamodeld in Sources */,
+				A841C74528EC83F50034ED8A /* UITextField + Extension.swift in Sources */,
+				A8F72C8128ED9A370019C9FD /* BaseDescriptionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,7 +666,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJGZ655CQS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MapKitLaba/Info.plist;
+				INFOPLIST_FILE = MapKitLaba/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -562,7 +694,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QJGZ655CQS;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MapKitLaba/Info.plist;
+				INFOPLIST_FILE = MapKitLaba/Resources/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -602,6 +734,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A841C73D28EC79DF0034ED8A /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A841C73E28EC79DF0034ED8A /* CoreData.xcdatamodel */,
+			);
+			currentVersion = A841C73E28EC79DF0034ED8A /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A866A35028DBA0FD007A4380 /* Project object */;
 }
