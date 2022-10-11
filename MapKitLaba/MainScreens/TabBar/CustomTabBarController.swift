@@ -21,16 +21,20 @@ class CustomTabBarController: UITabBarController {
         self.tabBar.backgroundColor = .systemGray
         self.tabBar.itemPositioning = .centered
         self.tabBar.itemSpacing = UIScreen.main.bounds.width / 4
-        self.tabBar.items?[1].titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
-        self.tabBar.items?[3].titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
+//        self.tabBar.items?[1].titlePositionAdjustment = UIOffset(horizontal: -15, vertical: 0)
+//        self.tabBar.items?[2].titlePositionAdjustment = UIOffset(horizontal: 15, vertical: 0)
+        
+        
 //        self.tabBar.isTranslucent = true
         
         viewControllers = [
-            generateNavigationController(controller: JoinViewController(), image: UIImage(named: "first") ?? UIImage()),
-            generateNavigationController(controller: JoinViewController(), image: UIImage(named: "second") ?? UIImage()),
-            generateNavigationController(controller: JoinViewController(), image: UIImage(named: "second") ?? UIImage()),
-            generateNavigationController(controller: JoinViewController(), image: UIImage(named: "third") ?? UIImage()),
-            generateNavigationController(controller: JoinViewController(), image: UIImage(named: "four") ?? UIImage())
+            generateNavigationController(controller: TodayViewController(), image: UIImage(named: "today") ?? UIImage()),
+            generateNavigationController(controller: PlaylistViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: MapViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: SheduleViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: ProfileViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: PlayerViewController(), image: UIImage(named: "zond") ?? UIImage())
+            
         ]
     }
     

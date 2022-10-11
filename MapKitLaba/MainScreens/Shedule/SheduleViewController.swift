@@ -1,5 +1,5 @@
 //
-//  NewsPlusVIewController.swift
+//  SheduleViewController.swift
 //  MapKitLaba
 //
 //  Created by Мельник Дмитрий on 08.10.2022.
@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 
-class NewsPlusVIewController: UIViewController {
+class SheduleViewController: UIViewController {
     
     private var tableView = UITableView()
     static var typeOf = Int()
@@ -38,38 +38,40 @@ class NewsPlusVIewController: UIViewController {
         tableView.delegate = self
         tableView.register(BaseDescriptionCell.self, forCellReuseIdentifier: "\(BaseDescriptionCell.self)")
         tableView.register(BaseTextFieldCell.self, forCellReuseIdentifier: "\(BaseTextFieldCell.self)")
-        tableView.register(BaseButtonStyle.self, forCellReuseIdentifier: "\(BaseButtonStyle.self)")
+        tableView.register(SheduleCell.self, forCellReuseIdentifier: "\(SheduleCell.self)")
         
     }
 }
 
-extension NewsPlusVIewController: UITableViewDelegate, UITableViewDataSource {
+
+
+extension SheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
         case 0:
-            let cell: BaseDescriptionCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.descLabel.text = "Sign in"
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 1:
-            let cell: BaseTextFieldCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.model = "Email"
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 2:
-            let cell: BaseTextFieldCell = tableView.dequeueReusableCell(for: indexPath)
-            cell.model = "Password"
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 3:
-            let cell: BaseButtonStyle = tableView.dequeueReusableCell(for: indexPath)
-            cell.button.setTitle("Sign In", for: .normal)
-            cell.button = UIButton(style: .sighInClearButtonStyle)
-            cell.button.backgroundColor = .darkRoundedButtonColor
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         case 4:
-            let cell: BaseButtonStyle = tableView.dequeueReusableCell(for: indexPath)
-            cell.button.setTitle("Sign Up", for: .normal)
-            cell.button = UIButton(style: .sighUpButtonStyle)
-            cell.button.backgroundColor = .darkRoundedButtonColor
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
+        case 5:
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
+        case 6:
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
+            return cell
+        case 7:
+            let cell: SheduleCell = tableView.dequeueReusableCell(for: indexPath)
             return cell
         default:
             fatalError("Index out of range")
@@ -78,6 +80,6 @@ extension NewsPlusVIewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        5
+        8
     }
 }

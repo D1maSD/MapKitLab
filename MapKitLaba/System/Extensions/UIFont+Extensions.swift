@@ -42,9 +42,31 @@ extension UIFont {
     static var placehodlerFont: UIFont {
         return .logoSubtitleFont.withSize(16)
     }
-
-    static var titleBaseCellFont: UIFont {
+    
+    
+    //MARK: systemFont20
+    static var systemFont20Semibold: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .semibold)
+    }
+    
+    static var systemFont20Regular: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .regular)
+    }
+    
+    static var systemFont20Medium: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .medium)
+    }
+    
+    static var systemFont20Light: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .light)
+    }
+    
+    static var systemFont20Bold: UIFont {
         return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .bold)
+    }
+    
+    static var systemFont20Heavy: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 20, weight: .heavy)
     }
 
     static var subtitleBaseCellFont: UIFont {
@@ -54,8 +76,37 @@ extension UIFont {
     static var  subtitleBaseDescriptionFont: UIFont {
         return UIFont(name: "SFCompact-Regular", size: 14) ?? .systemFont(ofSize: 15, weight: .regular)
     }
+    
+    
+    
+    //MARK: systemFont25
+    static var systemFont25Semibold: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .semibold)
+    }
+    
+    static var systemFont25Regular: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .regular)
+    }
+    
+    static var systemFont25Medium: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .medium)
+    }
+    
+    static var systemFont25Light: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .light)
+    }
+    
+    static var systemFont25Bold: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .bold)
+    }
+    
+    static var systemFont25Heavy: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .heavy)
+    }
+
 
     
+    //MARK: systemFont40
     static var sf32Font: UIFont {
         return .systemFont(ofSize: 40, weight: .bold)
     }

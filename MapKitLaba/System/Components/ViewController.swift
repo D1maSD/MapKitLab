@@ -16,9 +16,12 @@ class ViewController: UIViewController {
         //        view.backgroundColor = .systemOrange
         setupLayout()
         setup()
+        setupUI()
     }
     
     func setup() {}
     
     func setupLayout() {}
+    
+    func setupUI() {}
 }

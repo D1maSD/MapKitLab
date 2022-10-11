@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		2FC03AB97E9E13C392E4EC51 /* Pods_MapKitLaba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7DCFBA66D188242E91E78C /* Pods_MapKitLaba.framework */; };
+		A81F503928F20C8B00DB8FB5 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503828F20C8B00DB8FB5 /* PlaylistViewController.swift */; };
+		A81F503B28F20E8900DB8FB5 /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */; };
+		A81F503E28F210C500DB8FB5 /* SheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503D28F210C500DB8FB5 /* SheduleCell.swift */; };
+		A81F504128F211F300DB8FB5 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504028F211F300DB8FB5 /* NewsCell.swift */; };
+		A81F504328F2122900DB8FB5 /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504228F2122900DB8FB5 /* PlayerViewController.swift */; };
+		A81F504628F2124500DB8FB5 /* TracsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504528F2124500DB8FB5 /* TracsCell.swift */; };
+		A81F504828F3022600DB8FB5 /* UINavigationBar+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504728F3022600DB8FB5 /* UINavigationBar+Extensions.swift */; };
+		A81F504A28F3EA1600DB8FB5 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504928F3EA1600DB8FB5 /* RoundView.swift */; };
+		A81F504C28F3FD7600DB8FB5 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F504B28F3FD7600DB8FB5 /* ProfileViewController.swift */; };
 		A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */; };
 		A841C73028EB37B30034ED8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72F28EB37B30034ED8A /* User.swift */; };
 		A841C73928EC1FA10034ED8A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C73828EC1FA10034ED8A /* SignUpViewController.swift */; };
@@ -54,6 +63,15 @@
 
 /* Begin PBXFileReference section */
 		89CF5A76CF49E1C610DD4FD9 /* Pods-MapKitLaba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitLaba.release.xcconfig"; path = "Target Support Files/Pods-MapKitLaba/Pods-MapKitLaba.release.xcconfig"; sourceTree = "<group>"; };
+		A81F503828F20C8B00DB8FB5 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
+		A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
+		A81F503D28F210C500DB8FB5 /* SheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleCell.swift; sourceTree = "<group>"; };
+		A81F504028F211F300DB8FB5 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		A81F504228F2122900DB8FB5 /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		A81F504528F2124500DB8FB5 /* TracsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TracsCell.swift; sourceTree = "<group>"; };
+		A81F504728F3022600DB8FB5 /* UINavigationBar+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Extensions.swift"; sourceTree = "<group>"; };
+		A81F504928F3EA1600DB8FB5 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		A81F504B28F3FD7600DB8FB5 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPlaceCellVeiwModel.swift; sourceTree = "<group>"; };
 		A841C72F28EB37B30034ED8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A841C73828EC1FA10034ED8A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +150,50 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A81F503628F20B1D00DB8FB5 /* MusicPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A81F504428F2123100DB8FB5 /* Cells */,
+				A81F503828F20C8B00DB8FB5 /* PlaylistViewController.swift */,
+				A81F504228F2122900DB8FB5 /* PlayerViewController.swift */,
+			);
+			path = MusicPlayer;
+			sourceTree = "<group>";
+		};
+		A81F503728F20B3B00DB8FB5 /* Shedule */ = {
+			isa = PBXGroup;
+			children = (
+				A81F503C28F2107800DB8FB5 /* Cells */,
+				A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */,
+				A81F504B28F3FD7600DB8FB5 /* ProfileViewController.swift */,
+			);
+			path = Shedule;
+			sourceTree = "<group>";
+		};
+		A81F503C28F2107800DB8FB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A81F503D28F210C500DB8FB5 /* SheduleCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A81F503F28F211D300DB8FB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A81F504028F211F300DB8FB5 /* NewsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A81F504428F2123100DB8FB5 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A81F504528F2124500DB8FB5 /* TracsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		A841C73128EC132A0034ED8A /* Launch */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +248,9 @@
 		A841C73628EC1C360034ED8A /* MainScreens */ = {
 			isa = PBXGroup;
 			children = (
+				A8ECB05A28F1F997006A230F /* TabBar */,
+				A81F503728F20B3B00DB8FB5 /* Shedule */,
+				A81F503628F20B1D00DB8FB5 /* MusicPlayer */,
 				A8ECB05928F1F93A006A230F /* JoinGroup */,
 				A8ECB05828F1F91F006A230F /* News */,
 				A841C73728EC1C560034ED8A /* MapKitLab */,
@@ -276,6 +341,7 @@
 				A8F72C7F28ED9A1C0019C9FD /* TableViewCells */,
 				A8D0E89028E22902005D871C /* ViewController.swift */,
 				A8D0E89528E2D3C7005D871C /* RoundButton.swift */,
+				A81F504928F3EA1600DB8FB5 /* RoundView.swift */,
 				A8F72C8428EF24B30019C9FD /* BaseTextField.swift */,
 				A8ECB05028F0B866006A230F /* BaseButtonStyle.swift */,
 			);
@@ -287,6 +353,7 @@
 			children = (
 				A8D0E89328E22A5C005D871C /* UIView+Extensions.swift */,
 				A841C74628EC8CA50034ED8A /* UIFont+Extensions.swift */,
+				A81F504728F3022600DB8FB5 /* UINavigationBar+Extensions.swift */,
 				A841C74028EC7FD30034ED8A /* UILabel + Extensions.swift */,
 				A8D0E89D28E2F46C005D871C /* UITableView + Extensions.swift */,
 				A841C73D28EC79DF0034ED8A /* CoreData.xcdatamodeld */,
@@ -309,10 +376,10 @@
 		A8ECB05828F1F91F006A230F /* News */ = {
 			isa = PBXGroup;
 			children = (
+				A81F503F28F211D300DB8FB5 /* Cells */,
 				A8ECB05B28F1FA12006A230F /* TodayViewController.swift */,
 				A8ECB05D28F1FA37006A230F /* NewsPlusVIewController.swift */,
 				A8ECB05F28F1FA56006A230F /* FollowingViewController.swift */,
-				A8ECB05A28F1F997006A230F /* TabBar */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -486,19 +553,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8D0E89928E2D454005D871C /* ButtonStyles.swift in Sources */,
+				A81F504A28F3EA1600DB8FB5 /* RoundView.swift in Sources */,
 				A8D0E88928E1E4F9005D871C /* AboutPlaceCell.swift in Sources */,
 				A841C74328EC80750034ED8A /* UIButton + Extensions.swift in Sources */,
+				A81F504628F2124500DB8FB5 /* TracsCell.swift in Sources */,
 				A8F590C628E7205600534342 /* Lunacharskiy.swift in Sources */,
 				A8B49B9D28DCB0B3003FDF37 /* Parser.swift in Sources */,
 				A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */,
+				A81F504C28F3FD7600DB8FB5 /* ProfileViewController.swift in Sources */,
 				A8CFFEFD28E4AAE0009F14B8 /* TestScrollViewController.swift in Sources */,
 				A8D0E89C28E2D493005D871C /* Styles.swift in Sources */,
 				A866A36028DBA0FE007A4380 /* MapViewController.swift in Sources */,
 				A8D0E89E28E2F46C005D871C /* UITableView + Extensions.swift in Sources */,
+				A81F504128F211F300DB8FB5 /* NewsCell.swift in Sources */,
 				A8F72C8328EF15090019C9FD /* SignInViewController.swift in Sources */,
 				A8F590CA28E848CA00534342 /* InfoAboutPlaceViewController.swift in Sources */,
 				A8F72C8528EF24B30019C9FD /* BaseTextField.swift in Sources */,
 				A8CFFEFB28E4810F009F14B8 /* ViewModel.swift in Sources */,
+				A81F504328F2122900DB8FB5 /* PlayerViewController.swift in Sources */,
+				A81F503928F20C8B00DB8FB5 /* PlaylistViewController.swift in Sources */,
 				A8D0E89428E22A5C005D871C /* UIView+Extensions.swift in Sources */,
 				A841C74728EC8CA50034ED8A /* UIFont+Extensions.swift in Sources */,
 				A8F72C7E28ED995A0019C9FD /* CellConfiguration.swift in Sources */,
@@ -508,6 +581,7 @@
 				A8ECB05C28F1FA12006A230F /* TodayViewController.swift in Sources */,
 				A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */,
 				A8ECB05E28F1FA37006A230F /* NewsPlusVIewController.swift in Sources */,
+				A81F503B28F20E8900DB8FB5 /* SheduleViewController.swift in Sources */,
 				A8ECB04F28F04BD1006A230F /* BaseTextFieldCell.swift in Sources */,
 				A8ECB05728F1F8D5006A230F /* CustomTabBarController.swift in Sources */,
 				A8ECB05528F19CFA006A230F /* AgreeWithRulesSwift.swift in Sources */,
@@ -517,9 +591,11 @@
 				A8D0E88728E1E335005D871C /* AboutPlaceViewController.swift in Sources */,
 				A8ECB05128F0B866006A230F /* BaseButtonStyle.swift in Sources */,
 				A841C73928EC1FA10034ED8A /* SignUpViewController.swift in Sources */,
+				A81F503E28F210C500DB8FB5 /* SheduleCell.swift in Sources */,
 				A841C74B28EC913F0034ED8A /* Colors.swift in Sources */,
 				A8D0E89128E22902005D871C /* ViewController.swift in Sources */,
 				A8B49B9B28DC9F2D003FDF37 /* Locations.swift in Sources */,
+				A81F504828F3022600DB8FB5 /* UINavigationBar+Extensions.swift in Sources */,
 				A841C73F28EC79DF0034ED8A /* CoreData.xcdatamodeld in Sources */,
 				A841C74528EC83F50034ED8A /* UITextField + Extension.swift in Sources */,
 				A8F72C8128ED9A370019C9FD /* BaseDescriptionCell.swift in Sources */,
