@@ -7,162 +7,214 @@
 
 
 import UIKit
+import CoreData
 
 class SignUpViewController: UIViewController {
     
-    var welcomeLabel = UILabel(text: "Sveik! Hello!")
+    private var tableView = UITableView()
+    static var typeOf = Int()
+    public var typeWith = Int()
     
+    var delegate: SignUpDelegate?
     
-    var signUpButton = UIButton(title: "Sign up", titleColor: UIColor.black, backgroundColor: UIColor.white, font: UIFont.avenir20()!, shadow: true)
-    var switcher = UISwitch()
-    
-    var emailLabel = UILabel(text: "Email")
-    var passwordLabel = UILabel(text: "Password")
-    var confirmPasswordLabel = UILabel(text: "Confirm password")
-    var agreeWith = UILabel(text: "Agree with rules")
-    
-    let emailTextField = OneLineTextField(text: "")
-    let passwordTextField = OneLineTextField(text: "")
-    let confirmPasswordTextField = OneLineTextField(text: "")
-    
-    
+    var mailArray = [String]()
+    var passwordArray = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = .white
-        setUpConstraints()
-//        buttonsTapped()
+        configureTableView()
+        setup()
         
     }
     
-//    func buttonsTapped() {
-//        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
-//    }
+    func setupType(_ number: Int) {
+        self.typeWith = number
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        
+        tableView.frame = self.view.bounds
+        
+    }
+    
+    func configureTableView() {
+        view.backgroundColor = .white
+        self.view.addSubview(tableView)
+        
+        //        tableView.snp.makeConstraints {
+        //            $0.height.equalTo(400)
+        //            $0.left.equalToSuperview()
+        //            $0.right.equalToSuperview()
+        //            $0.top.equalToSuperview()
+        //        }
+        
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(BaseDescriptionCell.self, forCellReuseIdentifier: "\(BaseDescriptionCell.self)")
+        tableView.register(BaseTextFieldCell.self, forCellReuseIdentifier: "\(BaseTextFieldCell.self)")
+        tableView.register(BaseButtonStyle.self, forCellReuseIdentifier: "\(BaseButtonStyle.self)")
+        tableView.register(SignUpCell.self, forCellReuseIdentifier: "\(SignUpCell.self)")
+        
+        
+    }
+    
+    func setup() {
+        
+        //        signInButton.setTitle("Sign In", for: .normal)
+        //        signInButton = UIButton(style: .sighUpButtonStyle)
+        //        signInButton.addTarget(self, action: #selector(signInButtonTapped), for: .touchUpInside)
+        //
+        //        view.addSubview(signInButton)
+        //        signInButton.translatesAutoresizingMaskIntoConstraints = false
+        //
+        //        signInButton.snp.makeConstraints {
+        //            $0.left.equalToSuperview().offset(25)
+        //            $0.right.equalToSuperview().offset(-25)
+        //            $0.top.equalTo(tableView.snp.bottom).offset(15)
+        //            $0.height.equalTo(67)
+        //            $0.centerX.equalToSuperview()
+        //        }
+        //
+        //
+        //
+        //        signUpButton.setTitle("Sign Up", for: .normal)
+        //        signUpButton = UIButton(style: .sighUpButtonStyle)
+        //        signUpButton.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        //
+        //        view.addSubview(signUpButton)
+        //        signUpButton.translatesAutoresizingMaskIntoConstraints = false
+        //
+        //        signUpButton.snp.makeConstraints {
+        //            $0.left.equalToSuperview().offset(25)
+        //            $0.right.equalToSuperview().offset(-25)
+        //            $0.top.equalTo(signInButton.snp.bottom).offset(15)
+        //            $0.height.equalTo(67)
+        //            $0.centerX.equalTo(signInButton.center.x)
+        //        }
+    }
     
     @objc func signUpButtonTapped() {
-        print(#function)
-
-//        AuthService.shared.signUpUser(email: emailTextField.text, password: passwordTextField.text, confirmPassword: confirmPasswordTextField.text, completion: { result in
-//
-//            switch result {
-//            case .success(let success):
-//                self.showAlert(alertTitle: "Success", actionTitle: "OK", message: "User was registered")
-//            case .failure(let error):
-//                self.showAlert(alertTitle: "Failure", actionTitle: "OK", message: error.localizedDescription)
-//                print(error.localizedDescription)
-//            }
-//        })
+        
     }
     
-    
-    func showAlert(alertTitle: String, actionTitle: String, message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let alertAction = UIAlertAction(title: actionTitle, style: .default, handler: nil)
-        alert.addAction(alertAction)
-        present(alert, animated: true, completion: nil)
+    @objc func signInButtonTapped() {
+        
+        
+        //        emailValidation()
         
     }
     
     
-    func setUpConstraints() {
-        
-        let firstStackView = UIStackView(arrangedSubviews: [emailLabel, emailTextField])
-        firstStackView.axis = .vertical
-        firstStackView.spacing = 15
-        self.view.addSubview(firstStackView)
-        firstStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let secondStackView = UIStackView(arrangedSubviews: [passwordLabel, passwordTextField])
-        secondStackView.axis = .vertical
-        secondStackView.spacing = 15
-        self.view.addSubview(secondStackView)
-        secondStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let thirdStackView = UIStackView(arrangedSubviews: [confirmPasswordLabel, confirmPasswordTextField, ])
-        thirdStackView.axis = .vertical
-        thirdStackView.spacing = 15
-        self.view.addSubview(thirdStackView)
-        thirdStackView.translatesAutoresizingMaskIntoConstraints = false
-        
-        let stackView = UIStackView(arrangedSubviews: [firstStackView, secondStackView, thirdStackView])
-        stackView.axis = .vertical
-        stackView.spacing = 20
-        
-        self.view.addSubview(stackView)
-        self.view.addSubview(signUpButton)
-        self.view.addSubview(welcomeLabel)
-        self.view.addSubview(agreeWith)
-        self.view.addSubview(switcher)
-        
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
-        signUpButton.translatesAutoresizingMaskIntoConstraints = false
-        agreeWith.translatesAutoresizingMaskIntoConstraints = false
-        switcher.translatesAutoresizingMaskIntoConstraints = false
-        
-        
-        
-        NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 80),
-            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            stackView.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            agreeWith.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 35),
-            agreeWith.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
-            agreeWith.widthAnchor.constraint(equalToConstant: 200)
-//            welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            switcher.topAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 30),
-            switcher.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-            switcher.heightAnchor.constraint(equalToConstant: 30),
-            switcher.widthAnchor.constraint(equalToConstant: 50),
-//            switcher.centerXAnchor.constraint(equalTo: agreeWith.centerXAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            signUpButton.topAnchor.constraint(equalTo: agreeWith.bottomAnchor, constant: 80),
-            signUpButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
-            signUpButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
-            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 10),
-            welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
-        ])
-        
-    }
 }
 
-
-
-
-import SwiftUI
-
-struct LogInScreenViewControllerProvider: PreviewProvider {
+extension SignUpViewController: UITableViewDelegate, UITableViewDataSource {
     
-    static var previews: some View {
-        ContainerView().edgesIgnoringSafeArea(.all)
-    }
-    
-    struct ContainerView: UIViewControllerRepresentable {
-        
-        let viewController = SignUpViewController()
-        
-        func makeUIViewController(context: UIViewControllerRepresentableContext<LogInScreenViewControllerProvider.ContainerView>) -> some UIViewController {
-            return viewController
-        }
-        
-        func updateUIViewController(_ uiViewController: UIViewControllerType, context: UIViewControllerRepresentableContext<LogInScreenViewControllerProvider.ContainerView>) {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        switch indexPath.row {
+        case 0:
+            let cell: BaseDescriptionCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.descLabel.text = "Sign up"
+            return cell
             
+        case 1:
+            let cell: SignUpCell = tableView.dequeueReusableCell(for: indexPath)
+            cell.model = "Email"
+            cell.loginModel = "Login"
+            cell.passwordModel = "Password"
+            cell.confirmPasswordModel = "Confirm password"
+            
+            //            emailValidation(cell.emailTextField, cell.passwordTextField)
+            
+            cell.signInButton.setTitle("Sign In", for: .normal)
+            cell.signInButton = UIButton(style: .sighUpButtonStyle)
+            
+            cell.signInButton.addTarget(self, action: #selector(cell.signInTapped), for: .touchUpInside)
+            cell.signUpButton.addTarget(self, action: #selector(cell.signInTapped), for: .touchUpInside)
+            
+            cell.signUpButton.setTitle("Sign Up", for: .normal)
+            cell.signUpButton = UIButton(style: .sighUpButtonStyle)
+   
+            return cell
+            
+        default:
+            fatalError("Index out of range")
         }
     }
+    
+    @objc func emailVa() {
+        
+    }
+    
+    @objc func emailValidation(_ emailField: UITextField, _ passwordField: UITextField) {
+        
+        
+        // #1 link for AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        
+        // #2 create context
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        // #3 create entity description
+        let entityDescription = NSEntityDescription.entity(forEntityName: "UserEntitiy", in: context)
+        
+        // #4 create object
+        let managedObject = NSManagedObject(entity: entityDescription ?? NSEntityDescription(), insertInto: context)
+        
+        //#5 set value
+        
+        managedObject.setValue("@mail.ru", forKey: "email")
+        managedObject.setValue(21, forKey: "age")
+        
+        let mail = managedObject.value(forKey: "email")
+        let age = managedObject.value(forKey: "age")
+        print("\(mail)\(age)")
+        
+        //#6 save data
+        appDelegate.saveContext()
+        
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntitiy")
+        
+        
+        do {
+            let results = try context.fetch(fetchRequest)
+            for result in results as! [NSManagedObject] {
+                if let mail = result.value(forKey: "email") as? String {
+                    self.mailArray.append(mail)
+                }
+                if let password = result.value(forKey: "password") as? String {
+                    self.passwordArray.append(password)
+                }
+            }
+        } catch {
+            print(error)
+        }
+        
+        
+        if (mailArray.contains(emailField.text!)) {
+            let mailIndex = mailArray.firstIndex(where: {
+                $0 == emailField.text
+            })
+            
+            if passwordArray[mailIndex!] == passwordField.text {
+                self.navigationController?.pushViewController(SignUpViewController(), animated: true)
+            }
+        }
+        else {
+            let alert = UIAlertController(
+                title: "Error",
+                message: "Not found user with this email",
+                preferredStyle: .alert
+            )
+            let action = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
 }
-
 

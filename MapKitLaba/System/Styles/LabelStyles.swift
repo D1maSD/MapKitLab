@@ -25,7 +25,7 @@ extension ViewStyle where T == UILabel {
     
     static let baseSubtitleStyle = Self.baseStyle.compose(
         with: ViewStyle<UILabel> {
-            $0.font = .textFont
+            $0.font = .text16ThinFont
             $0.textColor = .subtitleTextColor
         }
     )

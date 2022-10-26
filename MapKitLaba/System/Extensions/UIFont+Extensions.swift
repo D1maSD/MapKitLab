@@ -23,12 +23,20 @@ extension UIFont {
         return .systemFont(ofSize: 20, weight: .medium)
     }
     
-    static var textFont: UIFont {
+    static var text16ThinFont: UIFont {
         return .systemFont(ofSize: 16, weight: .thin)
+    }
+    
+    static var text18SemiboldFont: UIFont {
+        return .systemFont(ofSize: 18, weight: .semibold)
     }
     
     static var logoTitleFont: UIFont {
         return .systemFont(ofSize: 40, weight: .black)
+    }
+    
+    static var systemFont35Heavy: UIFont {
+        return .systemFont(ofSize: 35, weight: .heavy)
     }
     
     static var logoSubtitleFont: UIFont {
@@ -36,8 +44,9 @@ extension UIFont {
     }
     
     static var onboardingTextFont: UIFont {
-        return .textFont.withSize(16)
+        return .text16ThinFont.withSize(16)
     }
+    
 
     static var placehodlerFont: UIFont {
         return .logoSubtitleFont.withSize(16)

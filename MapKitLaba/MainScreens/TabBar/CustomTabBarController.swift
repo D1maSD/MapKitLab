@@ -33,7 +33,15 @@ class CustomTabBarController: UITabBarController {
             generateNavigationController(controller: MapViewController(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: SheduleViewController(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: ProfileViewController(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: PlayerViewController(), image: UIImage(named: "zond") ?? UIImage())
+            generateNavigationController(controller: PlayerViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: CurrentNewsVIewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: FollowingViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SignUpViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SignInViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage())
+            
+            
             
         ]
     }

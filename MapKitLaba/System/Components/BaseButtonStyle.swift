@@ -44,6 +44,7 @@ class BaseButtonStyle: Cell {
     
     func setup() {
         contentView.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
         
         button.snp.makeConstraints {
             $0.left.equalToSuperview().offset(25)

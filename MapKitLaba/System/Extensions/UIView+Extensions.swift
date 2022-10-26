@@ -10,7 +10,7 @@ import UIKit
 
 extension UIView {
     
-    func addSubviewWith(_ view: UIView) {
+    func addSubviewWithTAMIC(_ view: UIView) {
         addSubview(view)
         view.translatesAutoresizingMaskIntoConstraints = false
     }

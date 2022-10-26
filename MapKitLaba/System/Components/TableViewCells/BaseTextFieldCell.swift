@@ -16,7 +16,7 @@ class BaseTextFieldCell: Cell {
         }
     }
     
-    private var textField: BaseTextField! {
+    var textField: BaseTextField! {
         didSet {
             setup()
         }
@@ -24,12 +24,12 @@ class BaseTextFieldCell: Cell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-//        setup()
+        //        setup()
     }
-
+    
     private func setup() {
         contentView.addSubview(textField)
-
+        
         textField.snp.makeConstraints {
             $0.left.equalToSuperview().offset(25)
             $0.right.equalToSuperview().offset(-25)
