@@ -34,5 +34,4 @@ class User {
             return (imputDictionary["password"] as? String)!
         }
     }
-    
 }

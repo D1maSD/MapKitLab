@@ -14,7 +14,6 @@ import SnapKit
 class MapKitViewController: UIViewController {
     
     
-    
     var mapView = MKMapView()
     private var locationManager: CLLocationManager!
     
