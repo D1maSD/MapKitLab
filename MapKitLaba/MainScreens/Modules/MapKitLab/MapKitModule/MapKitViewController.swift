@@ -11,8 +11,7 @@ import MapKit
 import SnapKit
 
 
-class MapKitViewController: UIViewController {
-    
+class MapKitViewController: ViewController {
     
     var mapView = MKMapView()
     private var locationManager: CLLocationManager!
@@ -21,6 +20,11 @@ class MapKitViewController: UIViewController {
     
     var viewModel: ViewModel?
     var aboutPlaceVC = AboutPlaceViewController()
+    
+    
+    // MARK: - Properties
+    var presenter: ViewToPresenterMapKitProtocol?
+    
     
     var mussonImageArray = [
         UIImage(named: "musson1"),
@@ -132,12 +136,8 @@ class MapKitViewController: UIViewController {
                                coordinate: CLLocationCoordinate2D(
                                 latitude: 44.613924,
                                 longitude: 33.520454)
-                              )
+    )
     
-    
-                               
-                               
-    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -153,7 +153,10 @@ class MapKitViewController: UIViewController {
     }
     
     
-    func setupLayout() {
+    // MARK: - setUpLayout
+    
+    override func setupLayout() {
+        self.view.addSubview(mapView)
         mapView.snp.makeConstraints {
             $0.left.equalTo(view)
             $0.right.equalTo(view)
@@ -161,7 +164,6 @@ class MapKitViewController: UIViewController {
             $0.bottom.equalTo(view)
         }
     }
-    
     
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         print("Region was selected")
@@ -225,16 +227,7 @@ class MapKitViewController: UIViewController {
         }
     }
     
-
-    // MARK: - Properties
-    var presenter: ViewToPresenterMapKitProtocol?
-    
 }
-
-extension MapKitViewController: PresenterToViewMapKitProtocol{
-    // TODO: Implement View Output Methods
-}
-
 
 extension MKMapView {
     
@@ -248,8 +241,6 @@ extension MKMapView {
 
 
 // MARK: - MKMapViewDelegate
-
-
 
 extension MapKitViewController: MKMapViewDelegate {
     
@@ -418,9 +409,9 @@ extension MapKitViewController: CLLocationManagerDelegate {
     }
 }
 
-
-
-
+extension MapKitViewController: PresenterToViewMapKitProtocol {
+    // TODO: Implement View Output Methods
+}
 
 
 
