@@ -146,6 +146,7 @@ class MapKitViewController: UIViewController {
         setUpMapViewCamera()
         setUpMapView()
         registerMapAnnotatonView()
+        setupLayout()
         
         locationManager.requestAlwaysAuthorization()
         locationManager.delegate = self
