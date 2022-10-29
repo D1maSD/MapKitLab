@@ -223,15 +223,15 @@ class MapViewController: ViewController {
     
 }
 
-extension MKMapView {
-    
-    // MARK: - searchRadius
-    
-    func searchRadius(_ location: CLLocation, radius: CLLocationDistance = 1000) {
-        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: radius, longitudinalMeters: radius)
-        setRegion(coordinateRegion, animated: true)
-    }
-}
+//extension MKMapView {
+//    
+//    // MARK: - searchRadius
+//    
+//    func searchRadius(_ location: CLLocation, radius: CLLocationDistance = 1000) {
+//        let coordinateRegion = MKCoordinateRegion(center: location.coordinate, latitudinalMeters: radius, longitudinalMeters: radius)
+//        setRegion(coordinateRegion, animated: true)
+//    }
+//}
 
 
 // MARK: - MKMapViewDelegate

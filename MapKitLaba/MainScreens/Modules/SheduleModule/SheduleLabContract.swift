@@ -10,34 +10,40 @@ import Foundation
 
 
 // MARK: View Output (Presenter -> View)
-protocol PresenterToViewSheduleLabProtocol {
+protocol PresenterToViewSheduleLabProtocol: AnyObject {
    
 }
 
 
 // MARK: View Input (View -> Presenter)
-protocol ViewToPresenterSheduleLabProtocol {
+protocol ViewToPresenterSheduleLabProtocol: AnyObject {
     
     var view: PresenterToViewSheduleLabProtocol? { get set }
     var interactor: PresenterToInteractorSheduleLabProtocol? { get set }
     var router: PresenterToRouterSheduleLabProtocol? { get set }
+    
+    
+    func numberOfRowsInSection() -> Int
+    func didSelectRowAt(index: Int)
+    func deselectRowAt(index: Int)
+    
 }
 
 
 // MARK: Interactor Input (Presenter -> Interactor)
-protocol PresenterToInteractorSheduleLabProtocol {
+protocol PresenterToInteractorSheduleLabProtocol: AnyObject {
     
     var presenter: InteractorToPresenterSheduleLabProtocol? { get set }
 }
 
 
 // MARK: Interactor Output (Interactor -> Presenter)
-protocol InteractorToPresenterSheduleLabProtocol {
+protocol InteractorToPresenterSheduleLabProtocol: AnyObject {
     
 }
 
 
 // MARK: Router Input (Presenter -> Router)
-protocol PresenterToRouterSheduleLabProtocol {
+protocol PresenterToRouterSheduleLabProtocol: AnyObject {
     
 }

@@ -39,9 +39,9 @@ class CustomTabBarController: UITabBarController {
             generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
             generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
             generateNavigationController(controller: SignUpViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignInViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage())
-            
-            
+            generateNavigationController(controller: SignInViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SheduleLabRouter.createModule(), image: UIImage(named: "today") ?? UIImage())
+
             
         ]
     }

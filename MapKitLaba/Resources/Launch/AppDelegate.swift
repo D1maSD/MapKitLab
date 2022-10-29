@@ -18,6 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        let navigationVC = UINavigationController(rootViewController: vc)
         let navigationVC = UINavigationController(rootViewController: vc)
         self.window = UIWindow(frame:UIScreen.main.bounds)
+//        window?.rootViewController = SheduleLabRouter.createModule()
         window?.rootViewController = navigationVC
         window?.makeKeyAndVisible()
         print("root")

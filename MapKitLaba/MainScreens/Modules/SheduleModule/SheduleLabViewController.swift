@@ -1,21 +1,25 @@
 //
-//  SheduleViewController.swift
+//  SheduleLabViewController.swift
 //  MapKitLaba
 //
-//  Created by Мельник Дмитрий on 08.10.2022.
+//  Created by Мельник Дмитрий on 26.10.2022.
+//  
 //
 
 import UIKit
-import SnapKit
 
-
-class SheduleViewController: UIViewController {
+class SheduleLabViewController: UIViewController {
     
+    
+    // MARK: - Properties
+    var presenter: ViewToPresenterSheduleLabProtocol?
     private var tableView = UITableView()
     static var typeOf = Int()
     public var typeWith = Int()
     
     
+    
+    // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -23,31 +27,19 @@ class SheduleViewController: UIViewController {
     }
     
     
-    func setupType(_ number: Int) {
-        self.typeWith = number
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         tableView.frame = self.view.bounds
     }
-    
-    func configureTableView() {
-        self.view.addSubview(tableView)
-        tableView.separatorStyle = .none
-        tableView.allowsSelection = false
-        tableView.dataSource = self
-        tableView.delegate = self
-        tableView.register(BaseDescriptionCell.self, forCellReuseIdentifier: "\(BaseDescriptionCell.self)")
-        tableView.register(BaseTextFieldCell.self, forCellReuseIdentifier: "\(BaseTextFieldCell.self)")
-        tableView.register(SheduleCell.self, forCellReuseIdentifier: "\(SheduleCell.self)")
-        
-    }
+
+}
+
+extension SheduleLabViewController: PresenterToViewSheduleLabProtocol{
+    // TODO: Implement View Output Methods
 }
 
 
-
-extension SheduleViewController: UITableViewDelegate, UITableViewDataSource {
+extension SheduleLabViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.row {
@@ -82,6 +74,20 @@ extension SheduleViewController: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        8
+        return presenter?.numberOfRowsInSection() ?? 0
+    }
+}
+
+extension SheduleLabViewController {
+    
+    func configureTableView() {
+        self.view.addSubview(tableView)
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.register(BaseDescriptionCell.self, forCellReuseIdentifier: "\(BaseDescriptionCell.self)")
+        tableView.register(BaseTextFieldCell.self, forCellReuseIdentifier: "\(BaseTextFieldCell.self)")
+        tableView.register(SheduleCell.self, forCellReuseIdentifier: "\(SheduleCell.self)")
     }
 }

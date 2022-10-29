@@ -10,6 +10,26 @@
 		2FC03AB97E9E13C392E4EC51 /* Pods_MapKitLaba.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE7DCFBA66D188242E91E78C /* Pods_MapKitLaba.framework */; };
 		A806D6E4290563BC00B75CA6 /* SignUpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806D6E3290563BC00B75CA6 /* SignUpCell.swift */; };
 		A806D6E629066F0E00B75CA6 /* SignInViewControllerTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A806D6E529066F0E00B75CA6 /* SignInViewControllerTwo.swift */; };
+		A81780A9290C586C003F6519 /* TodayNewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780A4290C586C003F6519 /* TodayNewsContract.swift */; };
+		A81780AA290C586C003F6519 /* TodayNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780A5290C586C003F6519 /* TodayNewsPresenter.swift */; };
+		A81780AB290C586C003F6519 /* TodayNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780A6290C586C003F6519 /* TodayNewsRouter.swift */; };
+		A81780AC290C586C003F6519 /* TodayNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780A7290C586C003F6519 /* TodayNewsViewController.swift */; };
+		A81780AD290C586C003F6519 /* TodayNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780A8290C586C003F6519 /* TodayNewsInteractor.swift */; };
+		A81780B6290C6092003F6519 /* CurrentNewsContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780B1290C6092003F6519 /* CurrentNewsContract.swift */; };
+		A81780B7290C6092003F6519 /* CurrentNewsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780B2290C6092003F6519 /* CurrentNewsPresenter.swift */; };
+		A81780B8290C6092003F6519 /* CurrentNewsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780B3290C6092003F6519 /* CurrentNewsRouter.swift */; };
+		A81780B9290C6092003F6519 /* CurrentNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780B4290C6092003F6519 /* CurrentNewsViewController.swift */; };
+		A81780BA290C6092003F6519 /* CurrentNewsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780B5290C6092003F6519 /* CurrentNewsInteractor.swift */; };
+		A81780C2290C680E003F6519 /* FollowingNewsModuleContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780BD290C680E003F6519 /* FollowingNewsModuleContract.swift */; };
+		A81780C3290C680E003F6519 /* FollowingNewsModulePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780BE290C680E003F6519 /* FollowingNewsModulePresenter.swift */; };
+		A81780C4290C680E003F6519 /* FollowingNewsModuleRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780BF290C680E003F6519 /* FollowingNewsModuleRouter.swift */; };
+		A81780C5290C680E003F6519 /* FollowingNewsModuleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780C0290C680E003F6519 /* FollowingNewsModuleViewController.swift */; };
+		A81780C6290C680E003F6519 /* FollowingNewsModuleInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780C1290C680E003F6519 /* FollowingNewsModuleInteractor.swift */; };
+		A81780CE290C6A29003F6519 /* MapKitContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780C9290C6A29003F6519 /* MapKitContract.swift */; };
+		A81780CF290C6A29003F6519 /* MapKitPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780CA290C6A29003F6519 /* MapKitPresenter.swift */; };
+		A81780D0290C6A29003F6519 /* MapKitRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780CB290C6A29003F6519 /* MapKitRouter.swift */; };
+		A81780D1290C6A29003F6519 /* MapKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780CC290C6A29003F6519 /* MapKitViewController.swift */; };
+		A81780D2290C6A29003F6519 /* MapKitInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81780CD290C6A29003F6519 /* MapKitInteractor.swift */; };
 		A81F503928F20C8B00DB8FB5 /* PlaylistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503828F20C8B00DB8FB5 /* PlaylistViewController.swift */; };
 		A81F503B28F20E8900DB8FB5 /* SheduleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */; };
 		A81F503E28F210C500DB8FB5 /* SheduleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A81F503D28F210C500DB8FB5 /* SheduleCell.swift */; };
@@ -77,6 +97,26 @@
 		89CF5A76CF49E1C610DD4FD9 /* Pods-MapKitLaba.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MapKitLaba.release.xcconfig"; path = "Target Support Files/Pods-MapKitLaba/Pods-MapKitLaba.release.xcconfig"; sourceTree = "<group>"; };
 		A806D6E3290563BC00B75CA6 /* SignUpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCell.swift; sourceTree = "<group>"; };
 		A806D6E529066F0E00B75CA6 /* SignInViewControllerTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewControllerTwo.swift; sourceTree = "<group>"; };
+		A81780A4290C586C003F6519 /* TodayNewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsContract.swift; sourceTree = "<group>"; };
+		A81780A5290C586C003F6519 /* TodayNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsPresenter.swift; sourceTree = "<group>"; };
+		A81780A6290C586C003F6519 /* TodayNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsRouter.swift; sourceTree = "<group>"; };
+		A81780A7290C586C003F6519 /* TodayNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsViewController.swift; sourceTree = "<group>"; };
+		A81780A8290C586C003F6519 /* TodayNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayNewsInteractor.swift; sourceTree = "<group>"; };
+		A81780B1290C6092003F6519 /* CurrentNewsContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNewsContract.swift; sourceTree = "<group>"; };
+		A81780B2290C6092003F6519 /* CurrentNewsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNewsPresenter.swift; sourceTree = "<group>"; };
+		A81780B3290C6092003F6519 /* CurrentNewsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNewsRouter.swift; sourceTree = "<group>"; };
+		A81780B4290C6092003F6519 /* CurrentNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNewsViewController.swift; sourceTree = "<group>"; };
+		A81780B5290C6092003F6519 /* CurrentNewsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentNewsInteractor.swift; sourceTree = "<group>"; };
+		A81780BD290C680E003F6519 /* FollowingNewsModuleContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingNewsModuleContract.swift; sourceTree = "<group>"; };
+		A81780BE290C680E003F6519 /* FollowingNewsModulePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingNewsModulePresenter.swift; sourceTree = "<group>"; };
+		A81780BF290C680E003F6519 /* FollowingNewsModuleRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingNewsModuleRouter.swift; sourceTree = "<group>"; };
+		A81780C0290C680E003F6519 /* FollowingNewsModuleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingNewsModuleViewController.swift; sourceTree = "<group>"; };
+		A81780C1290C680E003F6519 /* FollowingNewsModuleInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowingNewsModuleInteractor.swift; sourceTree = "<group>"; };
+		A81780C9290C6A29003F6519 /* MapKitContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitContract.swift; sourceTree = "<group>"; };
+		A81780CA290C6A29003F6519 /* MapKitPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitPresenter.swift; sourceTree = "<group>"; };
+		A81780CB290C6A29003F6519 /* MapKitRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitRouter.swift; sourceTree = "<group>"; };
+		A81780CC290C6A29003F6519 /* MapKitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitViewController.swift; sourceTree = "<group>"; };
+		A81780CD290C6A29003F6519 /* MapKitInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapKitInteractor.swift; sourceTree = "<group>"; };
 		A81F503828F20C8B00DB8FB5 /* PlaylistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaylistViewController.swift; sourceTree = "<group>"; };
 		A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleViewController.swift; sourceTree = "<group>"; };
 		A81F503D28F210C500DB8FB5 /* SheduleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleCell.swift; sourceTree = "<group>"; };
@@ -174,6 +214,81 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		A81780AE290C5877003F6519 /* NewsLab */ = {
+			isa = PBXGroup;
+			children = (
+				A81780C7290C6814003F6519 /* FollowingNewsModule */,
+				A81780BC290C613A003F6519 /* TodayNewsModule */,
+				A81780BB290C60A3003F6519 /* CurrentNewsModule */,
+			);
+			path = NewsLab;
+			sourceTree = "<group>";
+		};
+		A81780AF290C5FA9003F6519 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A81F504028F211F300DB8FB5 /* NewsCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A81780B0290C5FD2003F6519 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				A81F503D28F210C500DB8FB5 /* SheduleCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		A81780BB290C60A3003F6519 /* CurrentNewsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A81780B1290C6092003F6519 /* CurrentNewsContract.swift */,
+				A81780B2290C6092003F6519 /* CurrentNewsPresenter.swift */,
+				A81780B3290C6092003F6519 /* CurrentNewsRouter.swift */,
+				A81780B4290C6092003F6519 /* CurrentNewsViewController.swift */,
+				A81780B5290C6092003F6519 /* CurrentNewsInteractor.swift */,
+				A81780AF290C5FA9003F6519 /* Cells */,
+			);
+			path = CurrentNewsModule;
+			sourceTree = "<group>";
+		};
+		A81780BC290C613A003F6519 /* TodayNewsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A81780A4290C586C003F6519 /* TodayNewsContract.swift */,
+				A81780A5290C586C003F6519 /* TodayNewsPresenter.swift */,
+				A81780A6290C586C003F6519 /* TodayNewsRouter.swift */,
+				A81780A7290C586C003F6519 /* TodayNewsViewController.swift */,
+				A81780A8290C586C003F6519 /* TodayNewsInteractor.swift */,
+			);
+			path = TodayNewsModule;
+			sourceTree = "<group>";
+		};
+		A81780C7290C6814003F6519 /* FollowingNewsModule */ = {
+			isa = PBXGroup;
+			children = (
+				A81780BD290C680E003F6519 /* FollowingNewsModuleContract.swift */,
+				A81780BE290C680E003F6519 /* FollowingNewsModulePresenter.swift */,
+				A81780BF290C680E003F6519 /* FollowingNewsModuleRouter.swift */,
+				A81780C0290C680E003F6519 /* FollowingNewsModuleViewController.swift */,
+				A81780C1290C680E003F6519 /* FollowingNewsModuleInteractor.swift */,
+			);
+			path = FollowingNewsModule;
+			sourceTree = "<group>";
+		};
+		A81780C8290C6A0D003F6519 /* MapKitModule */ = {
+			isa = PBXGroup;
+			children = (
+				A81780C9290C6A29003F6519 /* MapKitContract.swift */,
+				A81780CA290C6A29003F6519 /* MapKitPresenter.swift */,
+				A81780CB290C6A29003F6519 /* MapKitRouter.swift */,
+				A81780CC290C6A29003F6519 /* MapKitViewController.swift */,
+				A81780CD290C6A29003F6519 /* MapKitInteractor.swift */,
+			);
+			path = MapKitModule;
+			sourceTree = "<group>";
+		};
 		A81F503628F20B1D00DB8FB5 /* MusicPlayerLab */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,27 +302,10 @@
 		A81F503728F20B3B00DB8FB5 /* SheduleLab */ = {
 			isa = PBXGroup;
 			children = (
-				A81F503C28F2107800DB8FB5 /* Cells */,
 				A81F503A28F20E8900DB8FB5 /* SheduleViewController.swift */,
 				A81F504B28F3FD7600DB8FB5 /* ProfileViewController.swift */,
 			);
 			path = SheduleLab;
-			sourceTree = "<group>";
-		};
-		A81F503C28F2107800DB8FB5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				A81F503D28F210C500DB8FB5 /* SheduleCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		A81F503F28F211D300DB8FB5 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				A81F504028F211F300DB8FB5 /* NewsCell.swift */,
-			);
-			path = Cells;
 			sourceTree = "<group>";
 		};
 		A81F504428F2123100DB8FB5 /* Cells */ = {
@@ -227,9 +325,20 @@
 			path = CoreData;
 			sourceTree = "<group>";
 		};
-		A82F87962909814A00D52568 /* SheduleLab */ = {
+		A82887F7290BDAC700B12E41 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				A81780C8290C6A0D003F6519 /* MapKitModule */,
+				A81780AE290C5877003F6519 /* NewsLab */,
+				A82F87962909814A00D52568 /* SheduleModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		A82F87962909814A00D52568 /* SheduleModule */ = {
+			isa = PBXGroup;
+			children = (
+				A81780B0290C5FD2003F6519 /* Cell */,
 				A82F878C2909812B00D52568 /* SheduleLabContract.swift */,
 				A82F878D2909812B00D52568 /* SheduleLabPresenter.swift */,
 				A82F878E2909812B00D52568 /* SheduleLabRouter.swift */,
@@ -237,7 +346,7 @@
 				A82F87902909812B00D52568 /* SheduleLabInteractor.swift */,
 				A82F878A290972A700D52568 /* RootWireFrame.swift */,
 			);
-			path = SheduleLab;
+			path = SheduleModule;
 			sourceTree = "<group>";
 		};
 		A841C73128EC132A0034ED8A /* Launch */ = {
@@ -295,7 +404,7 @@
 		A841C73628EC1C360034ED8A /* MainScreens */ = {
 			isa = PBXGroup;
 			children = (
-				A82F87962909814A00D52568 /* SheduleLab */,
+				A82887F7290BDAC700B12E41 /* Modules */,
 				A8E733A028F808E500AC817E /* LabScreens */,
 				A8ECB05A28F1F997006A230F /* TabBar */,
 				A8ECB05928F1F93A006A230F /* JoinGroup */,
@@ -432,7 +541,6 @@
 		A8ECB05828F1F91F006A230F /* NewsLab */ = {
 			isa = PBXGroup;
 			children = (
-				A81F503F28F211D300DB8FB5 /* Cells */,
 				A8ECB05B28F1FA12006A230F /* TodayViewController.swift */,
 				A8ECB05D28F1FA37006A230F /* CurrentNewsVIewController.swift */,
 				A8ECB05F28F1FA56006A230F /* FollowingViewController.swift */,
@@ -613,7 +721,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				A8D0E89928E2D454005D871C /* ButtonStyles.swift in Sources */,
+				A81780C3290C680E003F6519 /* FollowingNewsModulePresenter.swift in Sources */,
+				A81780B9290C6092003F6519 /* CurrentNewsViewController.swift in Sources */,
+				A81780C6290C680E003F6519 /* FollowingNewsModuleInteractor.swift in Sources */,
+				A81780AB290C586C003F6519 /* TodayNewsRouter.swift in Sources */,
 				A81F504A28F3EA1600DB8FB5 /* RoundView.swift in Sources */,
+				A81780D1290C6A29003F6519 /* MapKitViewController.swift in Sources */,
 				A8D0E88928E1E4F9005D871C /* AboutPlaceCell.swift in Sources */,
 				A841C74328EC80750034ED8A /* UIButton + Extensions.swift in Sources */,
 				A81F504628F2124500DB8FB5 /* TracsCell.swift in Sources */,
@@ -634,41 +747,56 @@
 				A8E7339F28F5791400AC817E /* Protocols.swift in Sources */,
 				A8F590CA28E848CA00534342 /* InfoAboutPlaceViewController.swift in Sources */,
 				A8F72C8528EF24B30019C9FD /* BaseTextField.swift in Sources */,
+				A81780B8290C6092003F6519 /* CurrentNewsRouter.swift in Sources */,
+				A81780AC290C586C003F6519 /* TodayNewsViewController.swift in Sources */,
 				A8CFFEFB28E4810F009F14B8 /* ViewModel.swift in Sources */,
 				A81F504328F2122900DB8FB5 /* PlayerViewController.swift in Sources */,
 				A81F503928F20C8B00DB8FB5 /* PlaylistViewController.swift in Sources */,
 				A8D0E89428E22A5C005D871C /* UIView+Extensions.swift in Sources */,
+				A81780AA290C586C003F6519 /* TodayNewsPresenter.swift in Sources */,
 				A841C74728EC8CA50034ED8A /* UIFont+Extensions.swift in Sources */,
 				A8F72C7E28ED995A0019C9FD /* CellConfiguration.swift in Sources */,
 				A841C74128EC7FD30034ED8A /* UILabel + Extensions.swift in Sources */,
 				A8ECB05328F18E9F006A230F /* SignUpViewControllerTwo.swift in Sources */,
+				A81780BA290C6092003F6519 /* CurrentNewsInteractor.swift in Sources */,
 				A841C73C28EC358C0034ED8A /* LabelStyles.swift in Sources */,
 				A8ECB05C28F1FA12006A230F /* TodayViewController.swift in Sources */,
 				A806D6E4290563BC00B75CA6 /* SignUpCell.swift in Sources */,
 				A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */,
 				A8C5CDE028F81DD500DF5063 /* NewsButton.swift in Sources */,
+				A81780D2290C6A29003F6519 /* MapKitInteractor.swift in Sources */,
 				A8ECB05E28F1FA37006A230F /* CurrentNewsVIewController.swift in Sources */,
 				A81F503B28F20E8900DB8FB5 /* SheduleViewController.swift in Sources */,
 				A8ECB04F28F04BD1006A230F /* BaseTextFieldCell.swift in Sources */,
 				A8ECB05728F1F8D5006A230F /* CustomTabBarController.swift in Sources */,
 				A8ECB05528F19CFA006A230F /* AgreeWithRulesSwift.swift in Sources */,
 				A8D0E89628E2D3C7005D871C /* RoundButton.swift in Sources */,
+				A81780CE290C6A29003F6519 /* MapKitContract.swift in Sources */,
 				A841C73028EB37B30034ED8A /* User.swift in Sources */,
 				A806D6E629066F0E00B75CA6 /* SignInViewControllerTwo.swift in Sources */,
+				A81780B6290C6092003F6519 /* CurrentNewsContract.swift in Sources */,
 				A825D2A52902F7F4000D5C43 /* LoginPasswordTextFieldCell.swift in Sources */,
+				A81780C5290C680E003F6519 /* FollowingNewsModuleViewController.swift in Sources */,
 				A8ECB06028F1FA56006A230F /* FollowingViewController.swift in Sources */,
+				A81780C2290C680E003F6519 /* FollowingNewsModuleContract.swift in Sources */,
 				A8D0E88728E1E335005D871C /* AboutPlaceViewController.swift in Sources */,
 				A82F87922909812B00D52568 /* SheduleLabPresenter.swift in Sources */,
 				A8ECB05128F0B866006A230F /* BaseButtonStyle.swift in Sources */,
 				A82F87952909812B00D52568 /* SheduleLabInteractor.swift in Sources */,
 				A841C73928EC1FA10034ED8A /* SignUpViewController.swift in Sources */,
+				A81780A9290C586C003F6519 /* TodayNewsContract.swift in Sources */,
 				A81F503E28F210C500DB8FB5 /* SheduleCell.swift in Sources */,
 				A841C74B28EC913F0034ED8A /* Colors.swift in Sources */,
 				A8D0E89128E22902005D871C /* ViewController.swift in Sources */,
+				A81780D0290C6A29003F6519 /* MapKitRouter.swift in Sources */,
+				A81780C4290C680E003F6519 /* FollowingNewsModuleRouter.swift in Sources */,
+				A81780AD290C586C003F6519 /* TodayNewsInteractor.swift in Sources */,
 				A8B49B9B28DC9F2D003FDF37 /* Locations.swift in Sources */,
 				A81F504828F3022600DB8FB5 /* UINavigationBar+Extensions.swift in Sources */,
+				A81780CF290C6A29003F6519 /* MapKitPresenter.swift in Sources */,
 				A82F87932909812B00D52568 /* SheduleLabRouter.swift in Sources */,
 				A841C73F28EC79DF0034ED8A /* MapKitLaba.xcdatamodeld in Sources */,
+				A81780B7290C6092003F6519 /* CurrentNewsPresenter.swift in Sources */,
 				A841C74528EC83F50034ED8A /* UITextField + Extension.swift in Sources */,
 				A8F72C8128ED9A370019C9FD /* BaseDescriptionCell.swift in Sources */,
 			);
