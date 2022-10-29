@@ -1,16 +1,53 @@
 //
-//  SignInViewController.swift
+//  SignUpViewController.swift
 //  MapKitLaba
 //
-//  Created by Мельник Дмитрий on 26.09.2022.
+//  Created by Мельник Дмитрий on 29.10.2022.
+//  
 //
 
 import UIKit
 import SnapKit
 import CoreData
 
-
-class SignUpViewControllerTwo: UIViewController {
+class SignUpViewController: UIViewController {
+    
+    // MARK: - Lifecycle Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        orLabel.text = "Or"
+        passwordModel = "Password"
+        model = "Email"
+        loginModel = "Login"
+        confirmPasswordModel = "Confirm password"
+        //            emailValidation(cell.emailTextField, cell.passwordTextField)
+        
+        
+        signInButton = UIButton(style: .sighUpButtonStyle)
+        signUpButton = UIButton(style: .sighUpButtonStyle)
+        
+        signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
+        signUpButton.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
+        
+        signUpButton.setTitle("Sign Up", for: .normal)
+        signInButton.setTitle("Sign In", for: .normal)
+        
+        //        passwordTextField.isSecureTextEntry = true
+        //        confirmPasswordTextField.isSecureTextEntry = true
+        
+        self.view.backgroundColor = .white
+        setup()
+    }
+    
+    // MARK: - Properties
+    var presenter: ViewToPresenterSignUpProtocol?
+    
+    struct Model {
+        var style: ViewStyle<UIButton>
+        var title: String
+        var didTap: () -> Void
+    }
     
     var signInButton = UIButton()
     var signUpButton = UIButton()
@@ -24,14 +61,6 @@ class SignUpViewControllerTwo: UIViewController {
     var orLabel = UILabel(style: .boldTextLabel.compose(with: ViewStyle<UILabel> {
         $0.textAlignment = .center
     }))
-    
-    
-    struct Model {
-        var style: ViewStyle<UIButton>
-        var title: String
-        var didTap: () -> Void
-    }
-    
     
     var model: String? {
         didSet {
@@ -66,33 +95,158 @@ class SignUpViewControllerTwo: UIViewController {
     var confirmPasswordTextField = BaseTextField()
     
     
-    override func viewDidLoad() {
+    
+    
+    
+    // MARK: - signUpTapped
+    
+    @objc func signUpTapped() {
+        //        delegate?.emailValidation(loginTextField, emailTextField)
+        signUp(loginField: loginTextField, emailField: emailTextField, passwordField: passwordTextField, confirmField: confirmPasswordTextField)
         
-        orLabel.text = "Or"
-        passwordModel = "Password"
-        model = "Email"
-        loginModel = "Login"
-        confirmPasswordModel = "Confirm password"
-        //            emailValidation(cell.emailTextField, cell.passwordTextField)
-        
-        
-        signInButton = UIButton(style: .sighUpButtonStyle)
-        signUpButton = UIButton(style: .sighUpButtonStyle)
-        
-        signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
-        signUpButton.addTarget(self, action: #selector(signUpTapped), for: .touchUpInside)
-        
-        signUpButton.setTitle("Sign Up", for: .normal)
-        signInButton.setTitle("Sign In", for: .normal)
-        
-        //        passwordTextField.isSecureTextEntry = true
-        //        confirmPasswordTextField.isSecureTextEntry = true
-        
-        self.view.backgroundColor = .white
-        setup()
+        print(loginTextField.text)
+        print(emailTextField.text)
+        print(confirmPasswordTextField.text)
+        print(passwordTextField.text)
     }
     
     
+    
+    // MARK: - signInTapped
+    @objc func signInTapped() {
+        self.navigationController?.pushViewController(SignInViewController(), animated: true)
+    }
+    
+    
+    // MARK: - signUp
+    func signUp(
+        loginField: UITextField,
+        emailField: UITextField,
+        passwordField: UITextField,
+        confirmField: UITextField
+    ) {
+
+        let passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$"
+
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+
+        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserEntitiy", into: context)
+
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntitiy")
+
+
+        //MARK: Check fields are not empty
+
+        guard emailField.text !=  "" || passwordField.text !=  "" || loginField.text !=  "" || confirmField.text != "" else {
+
+            let alert = UIAlertController(
+                title: "Error",
+                message: "Not all fields are filled in",
+                preferredStyle: .alert
+            )
+
+            let action = UIAlertAction(title: "OK", style: .default)
+            alert.addAction(action)
+            self.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        //        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserEntitiy", into: context) as NSManagedObject
+        //        newUser.setValue(loginField.text, forKey: "id")
+        //        newUser.setValue(passwordField.text, forKey: "password")
+
+
+
+
+        //MARK: Check fields are not empty
+
+        do {
+            let results = try context.fetch(fetchRequest)
+
+            for result in results as! [NSManagedObject] {
+
+                let mail = result.value(forKey: "email") as? String
+                let password = result.value(forKey: "password") as? String
+
+                if emailField.text == mail || passwordField.text == password {
+
+
+                    let alert = UIAlertController(title: "Account Exists", message: "There is an account with this email address.", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    // showAlert
+                    self.present(alert, animated: true, completion: nil)
+
+                }
+            }
+
+
+            if ((passwordField.text?.range(of: passwordPattern, options: .regularExpression) != nil) && (emailField.text?.range(of: emailRegEx, options: .regularExpression) != nil)) {
+
+                //MARK: if passwordField == confirmField
+                if (passwordField.text == confirmField.text) {
+
+
+                    //MARK: password.setValue  mail.setValue
+                    newUser.setValue(passwordField.text, forKey: "password")
+                    newUser.setValue(emailField.text, forKey: "email")
+                    newUser.setValue(loginField.text, forKey: "id")
+                    try context.save()
+
+                    print(newUser)
+                    print("OBJECT SAVED.")
+
+                    let alert = UIAlertController(title: "Registration Successful", message: "You are redirected to the login page", preferredStyle: .alert)
+
+                    let okAction = UIAlertAction(title: "OK", style: .default) { UIAlertAction in
+
+//                        _ = self.navigationController?.popViewController(animated: true)
+
+                    }
+
+                    alert.addAction(okAction)
+                    self.present(alert, animated: true, completion: nil)
+
+
+                    //MARK: alert Password Error
+                } else {
+                    let alert = UIAlertController(title: "Password Error", message: "Passwords do not match", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                    alert.addAction(okAction)
+                    // showAlert
+                    self.present(alert, animated: true, completion: nil)
+                }
+            }
+
+            else {
+
+                let alert = UIAlertController(title: "Registration failed", message: "Check email and password", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+                alert.addAction(okAction)
+                // PRESENT ALERT
+                self.present(alert, animated: true, completion: nil)
+            }
+
+        } catch let error as NSError {
+
+            let alert = UIAlertController(title: "Error", message: "Some system error. Please try again.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            alert.addAction(okAction)
+            // showAlert
+            self.present(alert, animated: true, completion: nil)
+
+            print(error.localizedDescription)
+            print(error.localizedDescription)
+            print(error.localizedDescription)
+        }
+
+    }
+    
+    
+    // MARK: - setUpLayout
     private func setup() {
         
         view.addSubview(loginTextField)
@@ -179,152 +333,9 @@ class SignUpViewControllerTwo: UIViewController {
             $0.centerX.equalTo(loginTextField.snp.centerX)
         }
     }
-    
-    
-    @objc func signUpTapped() {
-        //        delegate?.emailValidation(loginTextField, emailTextField)
-        signUp(loginField: loginTextField, emailField: emailTextField, passwordField: passwordTextField, confirmField: confirmPasswordTextField)
-        
-        print(loginTextField.text)
-        print(emailTextField.text)
-        print(confirmPasswordTextField.text)
-        print(passwordTextField.text)
-    }
-    
-    @objc func signInTapped() {
-        self.navigationController?.pushViewController(SignInViewControllerTwo(), animated: true)
-    }
-    
-    // MARK: emailValidation()
-    
-    func signUp(
-        loginField: UITextField,
-        emailField: UITextField,
-        passwordField: UITextField,
-        confirmField: UITextField
-    ) {
-        
-        let passwordPattern = "^(?=.*[A-Za-z])(?=.*\\d)(?=.*[$@$!%*#?&])[A-Za-z\\d$@$!%*#?&]{8,}$"
-        
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let context = appDelegate.persistentContainer.viewContext
-        
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserEntitiy", into: context)
-        
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserEntitiy")
-        
-        
-        //MARK: Check fields are not empty
-        
-        guard emailField.text !=  "" || passwordField.text !=  "" || loginField.text !=  "" || confirmField.text != "" else {
-            
-            let alert = UIAlertController(
-                title: "Error",
-                message: "Not all fields are filled in",
-                preferredStyle: .alert
-            )
-            
-            let action = UIAlertAction(title: "OK", style: .default)
-            alert.addAction(action)
-            self.present(alert, animated: true, completion: nil)
-            return
-        }
-        
-        
-        
-        
-        
-        
-        //        let newUser = NSEntityDescription.insertNewObject(forEntityName: "UserEntitiy", into: context) as NSManagedObject
-        //        newUser.setValue(loginField.text, forKey: "id")
-        //        newUser.setValue(passwordField.text, forKey: "password")
-        
- 
-        
-        
-        //MARK: Check fields are not empty
-        
-        do {
-            let results = try context.fetch(fetchRequest)
-            
-            for result in results as! [NSManagedObject] {
-                
-                let mail = result.value(forKey: "email") as? String
-                let password = result.value(forKey: "password") as? String
-                
-                if emailField.text == mail || passwordField.text == password {
-                    
-                    
-                    let alert = UIAlertController(title: "Account Exists", message: "There is an account with this email address.", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(okAction)
-                    // showAlert
-                    self.present(alert, animated: true, completion: nil)
-                    
-                }
-            }
-            
-            
-            if ((passwordField.text?.range(of: passwordPattern, options: .regularExpression) != nil) && (emailField.text?.range(of: emailRegEx, options: .regularExpression) != nil)) {
-                
-                //MARK: if passwordField == confirmField
-                if (passwordField.text == confirmField.text) {
-                    
-                    
-                    //MARK: password.setValue  mail.setValue
-                    newUser.setValue(passwordField.text, forKey: "password")
-                    newUser.setValue(emailField.text, forKey: "email")
-                    newUser.setValue(loginField.text, forKey: "id")
-                    try context.save()
-                    
-                    print(newUser)
-                    print("OBJECT SAVED.")
-                    
-                    let alert = UIAlertController(title: "Registration Successful", message: "You are redirected to the login page", preferredStyle: .alert)
-                    
-                    let okAction = UIAlertAction(title: "OK", style: .default) { UIAlertAction in
-                        
-//                        _ = self.navigationController?.popViewController(animated: true)
-                        
-                    }
-                    
-                    alert.addAction(okAction)
-                    self.present(alert, animated: true, completion: nil)
-                    
-                    
-                    //MARK: alert Password Error
-                } else {
-                    let alert = UIAlertController(title: "Password Error", message: "Passwords do not match", preferredStyle: .alert)
-                    let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                    alert.addAction(okAction)
-                    // showAlert
-                    self.present(alert, animated: true, completion: nil)
-                }
-            }
-            
-            else {
-                
-                let alert = UIAlertController(title: "Registration failed", message: "Check email and password", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-                alert.addAction(okAction)
-                // PRESENT ALERT
-                self.present(alert, animated: true, completion: nil)
-            }
-            
-        } catch let error as NSError {
-            
-            let alert = UIAlertController(title: "Error", message: "Some system error. Please try again.", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
-            alert.addAction(okAction)
-            // showAlert
-            self.present(alert, animated: true, completion: nil)
-            
-            print(error.localizedDescription)
-            print(error.localizedDescription)
-            print(error.localizedDescription)
-        }
-        
-    }
+}
+
+
+extension SignUpViewController: PresenterToViewSignUpProtocol {
+    // TODO: Implement View Output Methods
 }

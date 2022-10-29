@@ -28,18 +28,18 @@ class CustomTabBarController: UITabBarController {
 //        self.tabBar.isTranslucent = true
         
         viewControllers = [
-            generateNavigationController(controller: TodayViewController(), image: UIImage(named: "today") ?? UIImage()),
+            generateNavigationController(controller: NewsLabRouter.createModule(), image: UIImage(named: "today") ?? UIImage()),
             generateNavigationController(controller: PlaylistViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: MapViewController(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: SheduleViewController(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: ProfileViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: MapKitRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: SheduleLabRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: ProfileScreenViewController(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: PlayerViewController(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: CurrentNewsVIewController(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: FollowingViewController(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: CurrentNewsRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
+            generateNavigationController(controller: FollowingNewsModuleRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
             generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignUpViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignInViewControllerTwo(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
             generateNavigationController(controller: SheduleLabRouter.createModule(), image: UIImage(named: "today") ?? UIImage())
 
             

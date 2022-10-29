@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PlaylistViewController: UIViewController {
+class PlaylistViewController: UIViewController, TracsImageCellProtocol {
     
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {

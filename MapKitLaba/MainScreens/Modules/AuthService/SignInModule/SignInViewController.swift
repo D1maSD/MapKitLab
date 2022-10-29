@@ -1,8 +1,9 @@
 //
-//  SignInViewControllerTwo.swift
+//  SignInViewController.swift
 //  MapKitLaba
 //
-//  Created by Мельник Дмитрий on 24.10.2022.
+//  Created by Мельник Дмитрий on 29.10.2022.
+//  
 //
 
 import UIKit
@@ -10,7 +11,33 @@ import SnapKit
 import CoreData
 
 
-class SignInViewControllerTwo: UIViewController {
+class SignInViewController: UIViewController {
+    
+    // MARK: - Lifecycle Methods
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        model = "Password"
+        emailModel = "Email"
+        
+        orLabel.text = "Or"
+        
+        signInButton = UIButton(style: .sighUpButtonStyle)
+        signUpButton = UIButton(style: .sighUpButtonStyle)
+        
+        //        signInButton.addTarget(self, action: #selector(prito), for: .touchUpInside)
+        //        signUpButton.addTarget(self, action: #selector(prito), for: .touchUpInside)
+        
+        signInButton.setTitle("Sign In", for: .normal)
+        signUpButton.setTitle("Sign Up", for: .normal)
+        passwordTextField.isSecureTextEntry = true
+        view.backgroundColor = .white
+        setup()
+        
+    }
+
+    // MARK: - Properties
+    var presenter: ViewToPresenterSignInProtocol?
     
     var signInButton = UIButton()
     var signUpButton = UIButton()
@@ -46,27 +73,6 @@ class SignInViewControllerTwo: UIViewController {
     
     var emailTextField = BaseTextField()
     var passwordTextField = BaseTextField()
-    
-    override func viewDidLoad() {
-        
-        
-        model = "Password"
-        emailModel = "Email"
-        
-        orLabel.text = "Or"
-        
-        signInButton = UIButton(style: .sighUpButtonStyle)
-        signUpButton = UIButton(style: .sighUpButtonStyle)
-        
-        //        signInButton.addTarget(self, action: #selector(prito), for: .touchUpInside)
-        //        signUpButton.addTarget(self, action: #selector(prito), for: .touchUpInside)
-        
-        signInButton.setTitle("Sign In", for: .normal)
-        signUpButton.setTitle("Sign Up", for: .normal)
-        passwordTextField.isSecureTextEntry = true
-        view.backgroundColor = .white
-        setup()
-    }
     
     
     private func setup() {
@@ -128,7 +134,7 @@ class SignInViewControllerTwo: UIViewController {
     }
     
     // MARK: emailValidation() signIn
-
+    
     func checkForUserNameAndPasswordMatch(emailField: String, passwordField: String) {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -208,3 +214,8 @@ class SignInViewControllerTwo: UIViewController {
         }
     }
 }
+
+extension SignInViewController: PresenterToViewSignInProtocol{
+    // TODO: Implement View Output Methods
+}
+
