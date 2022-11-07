@@ -72,6 +72,11 @@
 		A82F87932909812B00D52568 /* SheduleLabRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F878E2909812B00D52568 /* SheduleLabRouter.swift */; };
 		A82F87942909812B00D52568 /* SheduleLabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F878F2909812B00D52568 /* SheduleLabViewController.swift */; };
 		A82F87952909812B00D52568 /* SheduleLabInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A82F87902909812B00D52568 /* SheduleLabInteractor.swift */; };
+		A83C356B2918F85900B70147 /* NoteContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C35662918F85900B70147 /* NoteContract.swift */; };
+		A83C356C2918F85900B70147 /* NotePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C35672918F85900B70147 /* NotePresenter.swift */; };
+		A83C356D2918F85900B70147 /* NoteRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C35682918F85900B70147 /* NoteRouter.swift */; };
+		A83C356E2918F85900B70147 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C35692918F85900B70147 /* NoteViewController.swift */; };
+		A83C356F2918F85900B70147 /* NoteInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83C356A2918F85900B70147 /* NoteInteractor.swift */; };
 		A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */; };
 		A841C73028EB37B30034ED8A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C72F28EB37B30034ED8A /* User.swift */; };
 		A841C73C28EC358C0034ED8A /* LabelStyles.swift in Sources */ = {isa = PBXBuildFile; fileRef = A841C73B28EC358C0034ED8A /* LabelStyles.swift */; };
@@ -85,6 +90,16 @@
 		A866A35C28DBA0FE007A4380 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A866A35B28DBA0FE007A4380 /* AppDelegate.swift */; };
 		A866A36528DBA102007A4380 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A866A36428DBA102007A4380 /* Assets.xcassets */; };
 		A866A36828DBA102007A4380 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A866A36628DBA102007A4380 /* LaunchScreen.storyboard */; };
+		A87CCDB22912FE2D0029BB4E /* SignUpService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB12912FE2D0029BB4E /* SignUpService.swift */; };
+		A87CCDB92915A1C80029BB4E /* MainScreenContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB42915A1C80029BB4E /* MainScreenContract.swift */; };
+		A87CCDBA2915A1C80029BB4E /* MainScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB52915A1C80029BB4E /* MainScreenPresenter.swift */; };
+		A87CCDBB2915A1C80029BB4E /* MainScreenRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB62915A1C80029BB4E /* MainScreenRouter.swift */; };
+		A87CCDBC2915A1C80029BB4E /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB72915A1C80029BB4E /* MainScreenViewController.swift */; };
+		A87CCDBD2915A1C80029BB4E /* MainScreenInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDB82915A1C80029BB4E /* MainScreenInteractor.swift */; };
+		A87CCDC0291641660029BB4E /* SheduleCellTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDBF291641660029BB4E /* SheduleCellTwo.swift */; };
+		A87CCDC229164BA20029BB4E /* MapCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDC129164BA10029BB4E /* MapCell.swift */; };
+		A87CCDC4291679560029BB4E /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDC3291679560029BB4E /* PlayerCell.swift */; };
+		A87CCDC62916796F0029BB4E /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A87CCDC52916796F0029BB4E /* ContactsCell.swift */; };
 		A8B49B9B28DC9F2D003FDF37 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B49B9A28DC9F2D003FDF37 /* Locations.swift */; };
 		A8B49B9D28DCB0B3003FDF37 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8B49B9C28DCB0B3003FDF37 /* Parser.swift */; };
 		A8C5CDE028F81DD500DF5063 /* NewsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C5CDDF28F81DD500DF5063 /* NewsButton.swift */; };
@@ -174,6 +189,11 @@
 		A82F878E2909812B00D52568 /* SheduleLabRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleLabRouter.swift; sourceTree = "<group>"; };
 		A82F878F2909812B00D52568 /* SheduleLabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleLabViewController.swift; sourceTree = "<group>"; };
 		A82F87902909812B00D52568 /* SheduleLabInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleLabInteractor.swift; sourceTree = "<group>"; };
+		A83C35662918F85900B70147 /* NoteContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteContract.swift; sourceTree = "<group>"; };
+		A83C35672918F85900B70147 /* NotePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotePresenter.swift; sourceTree = "<group>"; };
+		A83C35682918F85900B70147 /* NoteRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteRouter.swift; sourceTree = "<group>"; };
+		A83C35692918F85900B70147 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		A83C356A2918F85900B70147 /* NoteInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteInteractor.swift; sourceTree = "<group>"; };
 		A841C72D28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPlaceCellVeiwModel.swift; sourceTree = "<group>"; };
 		A841C72F28EB37B30034ED8A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A841C73B28EC358C0034ED8A /* LabelStyles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStyles.swift; sourceTree = "<group>"; };
@@ -189,6 +209,16 @@
 		A866A36428DBA102007A4380 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A866A36728DBA102007A4380 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A866A36928DBA102007A4380 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A87CCDB12912FE2D0029BB4E /* SignUpService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpService.swift; sourceTree = "<group>"; };
+		A87CCDB42915A1C80029BB4E /* MainScreenContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContract.swift; sourceTree = "<group>"; };
+		A87CCDB52915A1C80029BB4E /* MainScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenPresenter.swift; sourceTree = "<group>"; };
+		A87CCDB62915A1C80029BB4E /* MainScreenRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenRouter.swift; sourceTree = "<group>"; };
+		A87CCDB72915A1C80029BB4E /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		A87CCDB82915A1C80029BB4E /* MainScreenInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenInteractor.swift; sourceTree = "<group>"; };
+		A87CCDBF291641660029BB4E /* SheduleCellTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheduleCellTwo.swift; sourceTree = "<group>"; };
+		A87CCDC129164BA10029BB4E /* MapCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapCell.swift; sourceTree = "<group>"; };
+		A87CCDC3291679560029BB4E /* PlayerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
+		A87CCDC52916796F0029BB4E /* ContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		A8B49B9928DC9509003FDF37 /* Directions.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Directions.geojson; sourceTree = "<group>"; };
 		A8B49B9A28DC9F2D003FDF37 /* Locations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		A8B49B9C28DCB0B3003FDF37 /* Parser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
@@ -418,13 +448,13 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		A8178104290D4544003F6519 /* AuthService */ = {
+		A8178104290D4544003F6519 /* AuthModules */ = {
 			isa = PBXGroup;
 			children = (
 				A8178106290D4560003F6519 /* SignInModule */,
 				A8178105290D4558003F6519 /* SignUpModule */,
 			);
-			path = AuthService;
+			path = AuthModules;
 			sourceTree = "<group>";
 		};
 		A8178105290D4558003F6519 /* SignUpModule */ = {
@@ -463,7 +493,8 @@
 		A82887F7290BDAC700B12E41 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				A8178104290D4544003F6519 /* AuthService */,
+				A87CCDB32915A08E0029BB4E /* MainScreen */,
+				A8178104290D4544003F6519 /* AuthModules */,
 				A81780EC290D37CC003F6519 /* MusicPlayerLab */,
 				A81780C8290C6A0D003F6519 /* MapKitLab */,
 				A81780AE290C5877003F6519 /* NewsLab */,
@@ -475,11 +506,24 @@
 		A82F87962909814A00D52568 /* SheduleLab */ = {
 			isa = PBXGroup;
 			children = (
+				A83C35652918F84300B70147 /* NoteModule */,
 				A81780EB290D24A7003F6519 /* ProfileModule */,
 				A81780EA290D2491003F6519 /* SheduleModule */,
 				A82F878A290972A700D52568 /* RootWireFrame.swift */,
 			);
 			path = SheduleLab;
+			sourceTree = "<group>";
+		};
+		A83C35652918F84300B70147 /* NoteModule */ = {
+			isa = PBXGroup;
+			children = (
+				A83C35662918F85900B70147 /* NoteContract.swift */,
+				A83C35672918F85900B70147 /* NotePresenter.swift */,
+				A83C35682918F85900B70147 /* NoteRouter.swift */,
+				A83C35692918F85900B70147 /* NoteViewController.swift */,
+				A83C356A2918F85900B70147 /* NoteInteractor.swift */,
+			);
+			path = NoteModule;
 			sourceTree = "<group>";
 		};
 		A841C73128EC132A0034ED8A /* Launch */ = {
@@ -515,6 +559,7 @@
 		A841C73428EC16C80034ED8A /* System */ = {
 			isa = PBXGroup;
 			children = (
+				A87CCDB02912FD9C0029BB4E /* Services */,
 				A825D2A128FEF895000D5C43 /* CoreData */,
 				A8F72C7C28ED99210019C9FD /* Base */,
 				A841C73528EC18120034ED8A /* JSON */,
@@ -580,6 +625,38 @@
 				A8F590C328E7202900534342 /* Places */,
 			);
 			path = MapKitLaba;
+			sourceTree = "<group>";
+		};
+		A87CCDB02912FD9C0029BB4E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A87CCDB12912FE2D0029BB4E /* SignUpService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A87CCDB32915A08E0029BB4E /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				A87CCDBE291641150029BB4E /* Cells */,
+				A87CCDB42915A1C80029BB4E /* MainScreenContract.swift */,
+				A87CCDB52915A1C80029BB4E /* MainScreenPresenter.swift */,
+				A87CCDB62915A1C80029BB4E /* MainScreenRouter.swift */,
+				A87CCDB72915A1C80029BB4E /* MainScreenViewController.swift */,
+				A87CCDB82915A1C80029BB4E /* MainScreenInteractor.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+		A87CCDBE291641150029BB4E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A87CCDBF291641660029BB4E /* SheduleCellTwo.swift */,
+				A87CCDC52916796F0029BB4E /* ContactsCell.swift */,
+				A87CCDC3291679560029BB4E /* PlayerCell.swift */,
+				A87CCDC129164BA10029BB4E /* MapCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A8D0E88F28E228EB005D871C /* Components */ = {
@@ -789,6 +866,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83C356F2918F85900B70147 /* NoteInteractor.swift in Sources */,
 				A81780E6290D2488003F6519 /* ProfileScreenPresenter.swift in Sources */,
 				A8D0E89928E2D454005D871C /* ButtonStyles.swift in Sources */,
 				A81780DA290D0C05003F6519 /* AboutPlaceContract.swift in Sources */,
@@ -797,6 +875,7 @@
 				A81780E7290D2488003F6519 /* ProfileScreenRouter.swift in Sources */,
 				A81780B9290C6092003F6519 /* CurrentNewsViewController.swift in Sources */,
 				A81780C6290C680E003F6519 /* FollowingNewsModuleInteractor.swift in Sources */,
+				A87CCDBC2915A1C80029BB4E /* MainScreenViewController.swift in Sources */,
 				A81780AB290C586C003F6519 /* TodayNewsRouter.swift in Sources */,
 				A8178101290D383D003F6519 /* PlaylistViewController.swift in Sources */,
 				A81F504A28F3EA1600DB8FB5 /* RoundView.swift in Sources */,
@@ -810,19 +889,25 @@
 				A81780DD290D0C05003F6519 /* AboutPlaceViewController.swift in Sources */,
 				A8B49B9D28DCB0B3003FDF37 /* Parser.swift in Sources */,
 				A825D2A328FF2389000D5C43 /* UserEntitiy.swift in Sources */,
+				A87CCDB22912FE2D0029BB4E /* SignUpService.swift in Sources */,
+				A87CCDB92915A1C80029BB4E /* MainScreenContract.swift in Sources */,
 				A841C72E28E9B1840034ED8A /* AboutPlaceCellVeiwModel.swift in Sources */,
+				A87CCDBD2915A1C80029BB4E /* MainScreenInteractor.swift in Sources */,
 				A81780DE290D0C05003F6519 /* AboutPlaceInteractor.swift in Sources */,
 				A81780DC290D0C05003F6519 /* AboutPlaceRouter.swift in Sources */,
+				A87CCDC62916796F0029BB4E /* ContactsCell.swift in Sources */,
 				A82F87942909812B00D52568 /* SheduleLabViewController.swift in Sources */,
 				A82F87912909812B00D52568 /* SheduleLabContract.swift in Sources */,
 				A8D0E89C28E2D493005D871C /* Styles.swift in Sources */,
 				A8D0E89E28E2F46C005D871C /* UITableView + Extensions.swift in Sources */,
 				A8178118290D470A003F6519 /* SignUpRouter.swift in Sources */,
+				A83C356C2918F85900B70147 /* NotePresenter.swift in Sources */,
 				A81F504128F211F300DB8FB5 /* NewsCell.swift in Sources */,
 				A8178119290D470A003F6519 /* SignUpViewController.swift in Sources */,
 				A82F878B290972A700D52568 /* RootWireFrame.swift in Sources */,
 				A8E7339F28F5791400AC817E /* Protocols.swift in Sources */,
 				A817811A290D470A003F6519 /* SignUpInteractor.swift in Sources */,
+				A87CCDC229164BA20029BB4E /* MapCell.swift in Sources */,
 				A8F72C8528EF24B30019C9FD /* BaseTextField.swift in Sources */,
 				A8178102290D383D003F6519 /* PlaylistInteractor.swift in Sources */,
 				A81780B8290C6092003F6519 /* CurrentNewsRouter.swift in Sources */,
@@ -832,6 +917,9 @@
 				A81780AA290C586C003F6519 /* TodayNewsPresenter.swift in Sources */,
 				A81780DB290D0C05003F6519 /* AboutPlacePresenter.swift in Sources */,
 				A81780F6290D3823003F6519 /* PlayerRouter.swift in Sources */,
+				A87CCDC4291679560029BB4E /* PlayerCell.swift in Sources */,
+				A83C356D2918F85900B70147 /* NoteRouter.swift in Sources */,
+				A87CCDBA2915A1C80029BB4E /* MainScreenPresenter.swift in Sources */,
 				A81780FE290D383D003F6519 /* PlaylistContract.swift in Sources */,
 				A841C74728EC8CA50034ED8A /* UIFont+Extensions.swift in Sources */,
 				A8F72C7E28ED995A0019C9FD /* CellConfiguration.swift in Sources */,
@@ -843,17 +931,21 @@
 				A8C5CDE028F81DD500DF5063 /* NewsButton.swift in Sources */,
 				A81780D2290C6A29003F6519 /* MapKitInteractor.swift in Sources */,
 				A8178116290D470A003F6519 /* SignUpContract.swift in Sources */,
+				A83C356B2918F85900B70147 /* NoteContract.swift in Sources */,
 				A81780E5290D2488003F6519 /* ProfileScreenContract.swift in Sources */,
 				A81780E8290D2488003F6519 /* ProfileScreenViewController.swift in Sources */,
 				A81780F8290D3823003F6519 /* PlayerInteractor.swift in Sources */,
 				A8ECB04F28F04BD1006A230F /* BaseTextFieldCell.swift in Sources */,
 				A8ECB05728F1F8D5006A230F /* CustomTabBarController.swift in Sources */,
 				A81780F7290D3823003F6519 /* PlayerViewController.swift in Sources */,
+				A87CCDBB2915A1C80029BB4E /* MainScreenRouter.swift in Sources */,
 				A8ECB05528F19CFA006A230F /* AgreeWithRulesSwift.swift in Sources */,
 				A81780E9290D2488003F6519 /* ProfileScreenInteractor.swift in Sources */,
 				A8D0E89628E2D3C7005D871C /* RoundButton.swift in Sources */,
 				A8178117290D470A003F6519 /* SignUpPresenter.swift in Sources */,
+				A83C356E2918F85900B70147 /* NoteViewController.swift in Sources */,
 				A81780CE290C6A29003F6519 /* MapKitContract.swift in Sources */,
+				A87CCDC0291641660029BB4E /* SheduleCellTwo.swift in Sources */,
 				A841C73028EB37B30034ED8A /* User.swift in Sources */,
 				A81780B6290C6092003F6519 /* CurrentNewsContract.swift in Sources */,
 				A825D2A52902F7F4000D5C43 /* LoginPasswordTextFieldCell.swift in Sources */,

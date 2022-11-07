@@ -30,7 +30,7 @@ class TracsCell: Cell {
     
 //    private var newsText = UILabel()
     
-    weak var delegate: TracsImageCellProtocol?
+    weak var delegate: TracsImageCellProtocol? // universal protocol
     var gesture: UITapGestureRecognizer?
     
     private var newsText = UILabel()

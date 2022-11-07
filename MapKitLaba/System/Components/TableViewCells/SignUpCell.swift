@@ -12,7 +12,7 @@ class SignUpCell: Cell {
     
     var signInButton = UIButton()
     var signUpButton = UIButton()
-    var delegate: SignUpDelegate?
+//    var delegate: SignUpDelegate?
     var switcher = UISwitch()
     var agreeWith = UILabel(text: "Agree with rules")
     
@@ -95,9 +95,6 @@ class SignUpCell: Cell {
         signInButton.translatesAutoresizingMaskIntoConstraints = false
         orLabel.translatesAutoresizingMaskIntoConstraints = false
         switcher.translatesAutoresizingMaskIntoConstraints = false
-        switcher.translatesAutoresizingMaskIntoConstraints = false
-        
-         "Unable to activate constraint with anchors <NSLayoutYAxisAnchor:0x600002672940 \"UILabel:0x7fe8d8276b00.top\"> and <NSLayoutYAxisAnchor:0x600002672980 \"MapKitLaba.BaseTextField:0x7fe8d98a9c00.bottom\"> because they have no common ancestor.  Does the constraint or its anchors reference items in different view hierarchies?  That's illegal."
         
         loginTextField.snp.makeConstraints {
             $0.left.equalToSuperview().offset(25)
@@ -175,9 +172,9 @@ class SignUpCell: Cell {
     }
     
     @objc func signInTapped() {
-        delegate?.emailValidation(loginTextField, emailTextField)
-        print(loginTextField.text)
-        print(emailTextField.text)
+//        delegate?.emailValidation(loginTextField, emailTextField)
+//        print(loginTextField.text)
+//        print(emailTextField.text)
     }
     
     @objc func prito() {

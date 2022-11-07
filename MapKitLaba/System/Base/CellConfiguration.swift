@@ -8,15 +8,15 @@
 import UIKit
 
 
-typealias Cell = UITableViewCell & CellConfiguration
+typealias Cell = UITableViewCell //& CellConfiguration
 
 protocol CellConfiguration {
-    associatedtype M
-    var model: M? {get set}
+//    associatedtype M
+//    var model: M? {get set}
 }
 
-extension CellConfiguration {
-    mutating func config(_ model: M?) {
-        self.model = model
-    }
-}
+//extension CellConfiguration {
+//    mutating func config(_ model: M?) {
+//        self.model = model
+//    }
+//}

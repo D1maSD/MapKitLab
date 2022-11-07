@@ -7,9 +7,14 @@
 //
 
 import Foundation
+import MapKit
 
-class MapKitInteractor: PresenterToInteractorMapKitProtocol {
+class MapKitInteractor: PresenterToInteractorMapKitProtocol, MapViewArray {
+    typealias MapArray = MKAnnotation
+    
 
     // MARK: Properties
     var presenter: InteractorToPresenterMapKitProtocol?
+    var places: [MKAnnotation]?
+    
 }

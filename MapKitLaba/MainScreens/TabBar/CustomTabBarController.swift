@@ -36,12 +36,10 @@ class CustomTabBarController: UITabBarController {
             generateNavigationController(controller: PlayerViewController(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: CurrentNewsRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
             generateNavigationController(controller: FollowingNewsModuleRouter.createModule(), image: UIImage(named: "zond") ?? UIImage()),
-            generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignUpViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SignInViewController(), image: UIImage(named: "gridicons") ?? UIImage()),
-            generateNavigationController(controller: SheduleLabRouter.createModule(), image: UIImage(named: "today") ?? UIImage())
-
+            generateNavigationController(controller: SignUpRouter.createModule(), image: UIImage(named: "today") ?? UIImage()),
+            generateNavigationController(controller: SignInRouter.createModule(), image: UIImage(named: "gridicons") ?? UIImage()),
+            generateNavigationController(controller: SheduleLabRouter.createModule(), image: UIImage(named: "today") ?? UIImage()),
+            generateNavigationController(controller: MainScreenRouter.createModule(), image: UIImage(named: "gridicons") ?? UIImage())
             
         ]
     }

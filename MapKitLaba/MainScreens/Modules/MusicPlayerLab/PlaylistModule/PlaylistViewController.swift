@@ -10,6 +10,11 @@ import UIKit
 
 class PlaylistViewController: UIViewController, TracsImageCellProtocol {
     
+    //    @objc func didTapImageView(for cell: Cell) {
+    //        <#code#>
+    //    }
+    //
+    
     // MARK: - Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,13 +40,9 @@ class PlaylistViewController: UIViewController, TracsImageCellProtocol {
     
     @objc func didTapImageView(for cell: TracsCell) {
         
+        print("didTapImageView")
         let viewControllelr = PlayerViewController()
-        
-        
-        viewControllelr.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
-        self.present(viewControllelr, animated: true, completion: nil)
-        
-        //        self.navigationController?.pushViewController(navigationController, animated: true)
+        self.navigationController?.pushViewController(viewControllelr, animated: true)
     }
     
     
@@ -82,6 +83,8 @@ extension PlaylistViewController: UITableViewDelegate, UITableViewDataSource {
         case 2:
             let cell: TracsCell = tableView.dequeueReusableCell(for: indexPath)
             cell.delegate = self
+            
+            
             return cell
         case 3:
             let cell: TracsCell = tableView.dequeueReusableCell(for: indexPath)
@@ -103,19 +106,50 @@ extension PlaylistViewController: UITableViewDelegate, UITableViewDataSource {
         print("didSelectRowAt")
         switch indexPath.row {
         case 0:
-            let viewController = PlayerViewController()
-            self.navigationController?.pushViewController(viewController, animated: true)
+            //            let viewController = PlayerViewController()
+            //            self.navigationController?.pushViewController(viewController, animated: true)
+            print("didSelectRowAt")
+        case 1:
+            //            let viewController = PlayerViewController()
+            //            self.navigationController?.pushViewController(viewController, animated: true)
+            print("didSelectRowAt")
+        case 2:
+            //            let viewController = PlayerViewController()
+            //            self.navigationController?.pushViewController(viewController, animated: true)
+            print("didSelectRowAt")
         default:
-            let viewController = PlayerViewController()
-            self.navigationController?.pushViewController(viewController, animated: true)
+            //            let viewController = PlayerViewController()
+            //            self.navigationController?.pushViewController(viewController, animated: true)
+            print("didSelectRowAt")
         }
     }
 }
 
-extension PlayerViewController: TracsImageCellProtocol {
-    func didTapImageView(for cell: TracsCell) {
-        let viewControllelr = PlayerViewController()
-        self.navigationController?.pushViewController(viewControllelr, animated: true)
-    }
-    
-}
+//extension PlayerViewController: TracsImageCellProtocol {
+//    func didTapImageView(for cell: TracsCell) {
+//        let viewControllelr = PlayerViewController()
+//        self.navigationController?.pushViewController(viewControllelr, animated: true)
+//    }
+//}
+
+
+
+
+
+
+//@objc protocol DidTappedCell {
+//    func cellDidTapped()
+//}
+//
+//
+//class SomeViewController: UIViewController, DidTappedCell {
+//
+//    func cellDidTapped() {
+//        print("Cell was tapped")
+//    }
+//}
+//
+//class SomeCell: UITableViewCell {
+//
+//    weak var delegate: DidTappedCell?
+//}

@@ -27,6 +27,8 @@ extension UIFont {
         return .systemFont(ofSize: 16, weight: .thin)
     }
     
+    
+    
     static var text18SemiboldFont: UIFont {
         return .systemFont(ofSize: 18, weight: .semibold)
     }
@@ -112,7 +114,22 @@ extension UIFont {
     static var systemFont25Heavy: UIFont {
         return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 25, weight: .heavy)
     }
+    
+    static var systemFont14Regular: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 14) ?? .systemFont(ofSize: 14, weight: .regular)
+    }
 
+    static var systemFont32Black: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 32, weight: .black)
+    }
+    
+    static var systemFont16Semibold: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 16, weight: .semibold)
+    }
+    
+    static var systemFont14Medium: UIFont {
+        return UIFont(name: "SFCompact-Medium", size: 20) ?? .systemFont(ofSize: 14, weight: .medium)
+    }
 
     
     //MARK: systemFont40
