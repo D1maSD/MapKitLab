@@ -27,7 +27,7 @@ protocol StartsFlowProtocol {
 
 
 @objc protocol TracsImageCellProtocol {
-    func didTapImageView(for cell: TracsCell)
+    func didTapImageView(for cell: Cell)
 }
 
 @objc protocol MainScreenCellProtocol {

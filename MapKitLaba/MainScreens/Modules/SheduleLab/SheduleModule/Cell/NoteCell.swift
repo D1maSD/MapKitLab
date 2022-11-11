@@ -1,15 +1,15 @@
 //
-//  SheduleCell.swift
+//  NoteCell.swift
 //  MapKitLaba
 //
-//  Created by Мельник Дмитрий on 08.10.2022.
+//  Created by Мельник Дмитрий on 07.11.2022.
 //
 
 import UIKit
 import SnapKit
 
 
-class SheduleCell: Cell {
+class NoteCell: Cell {
     
     var model: String?
 //    {
@@ -26,7 +26,7 @@ class SheduleCell: Cell {
     var firstTask = UILabel()
     private var secondTask = UILabel()
     
-    private var firstTaskMark = RoundView()
+    private var personProfileImage = RoundView()
     private var secondTaskMark = RoundView()
     
     private var verticalLineView = UIView()
@@ -50,9 +50,9 @@ class SheduleCell: Cell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        roundedContentView.isUserInteractionEnabled = true
-        gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        self.roundedContentView.addGestureRecognizer(gesture ?? UIGestureRecognizer())
+//        roundedContentView.isUserInteractionEnabled = true
+//        gesture = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+//        self.roundedContentView.addGestureRecognizer(gesture ?? UIGestureRecognizer())
         
         setup()
         markAsDoneButton.addTarget(self, action: #selector(buttonDidTapped), for: .touchUpInside)
@@ -92,18 +92,20 @@ class SheduleCell: Cell {
         
     }
     private func setup() {
-        //        newsText.backgroundColor = .clear
-        //        newsText.textAlignment = .left
-        //        newsText.numberOfLines = 5
-        //        newsText.minimumScaleFactor = 0.8
-        //        newsText.adjustsFontSizeToFitWidth = true
-        //        newsText.font = .titleBaseCellFont
+        
+        
+        firstTask.backgroundColor = .clear
+        firstTask.textAlignment = .left
+        firstTask.numberOfLines = 2
+//        firstTask.minimumScaleFactor = 0.8
+//                newsText.adjustsFontSizeToFitWidth = true
+//                newsText.font = .titleBaseCellFont
 
         deleteButton.setImage(UIImage(named: "delete-row-white"), for: .normal)
         
         lessonName.minimumScaleFactor = 1
         lessonName.font = .systemFont16Semibold
-        lessonName.text = "History"
+        lessonName.text = "Dmitriy Melnik"
         lessonName.textColor = .white
         lessonName.translatesAutoresizingMaskIntoConstraints = false
         
@@ -115,12 +117,12 @@ class SheduleCell: Cell {
         
         
         firstTask.font = .systemFont14Regular
-        secondTask.font = .systemFont14Regular
+//        secondTask.font = .systemFont14Regular
         
         roundedContentView.layer.cornerRadius = 20
         markAsDoneButton.layer.cornerRadius = 7
         
-        firstTaskMark.backgroundColor = .systemGray
+        personProfileImage.backgroundColor = .systemGray
         secondTaskMark.backgroundColor = .systemGray
         verticalLineView.backgroundColor = .systemYellow
         roundedCheckMarkView.backgroundColor = .systemYellow
@@ -134,14 +136,14 @@ class SheduleCell: Cell {
         markAsDoneButton.titleLabel?.font = .systemFont14Medium
         
         firstTask.textColor = .systemGray
-        secondTask.textColor = .systemGray
+//        secondTask.textColor = .systemGray
         roundedContentView.backgroundColor = .systemYellow
         
         
         markAsDoneButton.setTitle("Marked as done", for: .normal)
         
         firstTask.text = "Presentation about Franch in 16 cen..."
-        secondTask.text = "Write essay about king Spain Georg ..."
+//        secondTask.text = "Write essay about king Spain Georg ..."
         //        moreButton.setImage(UIImage(named: "more"), for: .normal)
         
         contentView.addSubview(roundedContentView)
@@ -152,8 +154,8 @@ class SheduleCell: Cell {
         
         roundedContentView.addSubview(lessonName)
         roundedContentView.addSubview(firstTask)
-        roundedContentView.addSubview(secondTask)
-        roundedContentView.addSubview(firstTaskMark)
+//        roundedContentView.addSubview(secondTask)
+        roundedContentView.addSubview(personProfileImage)
         roundedContentView.addSubview(secondTaskMark)
         roundedContentView.addSubview(markAsDoneButton)
         roundedContentView.addSubview(deleteButton)
@@ -173,42 +175,39 @@ class SheduleCell: Cell {
             $0.centerY.equalTo(contentView.snp.centerY)
             $0.height.equalTo(self.frame.width - 200)
             $0.width.equalTo(self.frame.width - 30)
-            print(self.frame.width - 90)
-            print(self.frame.width - 90)
-            print(self.frame.width - 90)
-            print(self.frame.width - 90)
+            
         }
         
         lessonName.snp.makeConstraints {
-            $0.left.equalTo(roundedContentView.snp.left).offset(14)
+            $0.left.equalTo(personProfileImage.snp.right).offset(8)
             $0.top.equalTo(roundedContentView.snp.top).offset(8)
         }
         
-        firstTaskMark.snp.makeConstraints {
-            $0.left.equalTo(roundedContentView.snp.left).offset(14)
-            $0.top.equalTo(roundedContentView.snp.top).offset(38)
-            $0.height.equalTo(3)
-            $0.width.equalTo(3)
+        personProfileImage.snp.makeConstraints {
+            $0.left.equalTo(roundedContentView.snp.left).offset(8)
+            $0.top.equalTo(roundedContentView.snp.top).offset(8)
+            $0.height.equalTo(65)
+            $0.width.equalTo(65)
         }
         
-        secondTaskMark.snp.makeConstraints {
-            $0.left.equalTo(roundedContentView.snp.left).offset(14)
-            $0.top.equalTo(roundedContentView.snp.top).offset(59)
-            $0.height.equalTo(3)
-            $0.width.equalTo(3)
-        }
+//        secondTaskMark.snp.makeConstraints {
+//            $0.left.equalTo(roundedContentView.snp.left).offset(14)
+//            $0.top.equalTo(roundedContentView.snp.top).offset(59)
+//            $0.height.equalTo(3)
+//            $0.width.equalTo(3)
+//        }
         
         firstTask.snp.makeConstraints {
-            $0.left.equalTo(firstTaskMark.snp.left).offset(8)
+            $0.left.equalTo(personProfileImage.snp.right).offset(8)
             $0.right.equalTo(roundedContentView.snp.right).offset(-14)
-            $0.centerY.equalTo(firstTaskMark.snp.centerY)
+            $0.centerY.equalTo(personProfileImage.snp.centerY)
         }
         
-        secondTask.snp.makeConstraints {
-            $0.left.equalTo(secondTaskMark.snp.left).offset(8)
-            $0.right.equalTo(roundedContentView.snp.right).offset(-14)
-            $0.centerY.equalTo(secondTaskMark.snp.centerY)
-        }
+//        secondTask.snp.makeConstraints {
+//            $0.left.equalTo(personProfileImage.snp.right).offset(8)
+//            $0.right.equalTo(roundedContentView.snp.right).offset(-14)
+//            $0.top.equalTo(firstTask.snp.bottom).offset(5)
+//        }
         
         markAsDoneButton.snp.makeConstraints {
             $0.right.equalTo(roundedContentView.snp.right).offset(-18)
@@ -218,7 +217,8 @@ class SheduleCell: Cell {
         }
         
         deleteButton.snp.makeConstraints {
-            $0.left.equalTo(roundedContentView.snp.left).offset(14)
+//            $0.left.equalTo(roundedContentView.snp.left).offset(14)
+            $0.centerX.equalTo(personProfileImage.snp.centerX)
             $0.bottom.equalTo(roundedContentView.snp.bottom).offset(-9)
             $0.height.equalTo(24)
             $0.width.equalTo(24)

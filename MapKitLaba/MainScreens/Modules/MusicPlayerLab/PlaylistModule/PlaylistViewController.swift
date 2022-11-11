@@ -10,6 +10,31 @@ import UIKit
 
 class PlaylistViewController: UIViewController, TracsImageCellProtocol {
     
+    
+    func didTapImageView(for cell: Cell) {
+        
+        switch cell {
+        case is TracsCell:
+            print("some")
+        default:
+            print("no")
+        }
+        
+        
+//        print("Tap")
+//        if let cel == cell as? TracsCell {
+//
+//            print("Tap")
+//            let vc = SheduleLabRouter.createModule()
+//            self.navigationController?.pushViewController(vc, animated: true)
+             
+        
+//        print("didTapImageView")
+//        let viewControllelr = PlayerViewController()
+//        self.navigationController?.pushViewController(viewControllelr, animated: true)
+    }
+    
+    
     //    @objc func didTapImageView(for cell: Cell) {
     //        <#code#>
     //    }
@@ -38,12 +63,12 @@ class PlaylistViewController: UIViewController, TracsImageCellProtocol {
     }
     
     
-    @objc func didTapImageView(for cell: TracsCell) {
-        
-        print("didTapImageView")
-        let viewControllelr = PlayerViewController()
-        self.navigationController?.pushViewController(viewControllelr, animated: true)
-    }
+    //    @objc func didTapImageView(for cell: TracsCell) {
+    //
+    //        print("didTapImageView")
+    //        let viewControllelr = PlayerViewController()
+    //        self.navigationController?.pushViewController(viewControllelr, animated: true)
+    //    }
     
     
     func configureTableView() {
